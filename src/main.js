@@ -4,12 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+import store from './store/'
+import './assets/icon/iconfont.css'
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
+  // 注入路由
   router,
-  components: { App },
-  template: '<App/>'
+  // 注入仓库
+  store,
+  // 渲染
+  render:h=>h(App)
+
 })

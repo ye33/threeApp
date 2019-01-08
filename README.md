@@ -1,6 +1,7 @@
 # threeapp
 
-> A Vue.js project
+
+> about threeapp
 
 ## Build Setup
 
