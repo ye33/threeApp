@@ -1,0 +1,38 @@
+.home_sreach {
+    position:relative;
+    height: 36px;
+    .camera{
+        position:absolute;
+        top:13px;
+        right:50px;
+        z-index:20;
+    }
+
+    .mint-searchbar{
+        background-color:#944D91;
+
+        .mint-searchbar-inner{
+            border-radius:16px;
+            background-color:#C9A6C8;
+            
+            input::-webkit-input-placeholder{
+                color:#fff;
+            }
+            .mint-searchbar-core{
+                padding-left:8px;
+                background-color:#C9A6C8;
+                color:#fff;
+            }
+        }
+        
+        .mint-searchbar-cancel{
+            display:block !important;
+            color:#fff;
+        }
+
+        .mint-search-list{
+           display:block !important;
+       }
+       
+   }
+}

@@ -6,6 +6,7 @@ import router from './router'
 
 import store from './store/'
 import './assets/icon/iconfont.css'
+import "./assets/base.css"
 
 new Vue({
   el: '#app',

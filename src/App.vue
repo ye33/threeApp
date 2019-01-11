@@ -10,7 +10,6 @@
       </mt-tab-item>
     </mt-tabbar>
 
-
   </div>
 </template>
 
@@ -21,6 +20,17 @@ import mintUi from 'mint-ui';
 import 'mint-ui/lib/style.css';
 Vue.use(mintUi);
 
+// 可能会有冲突
+import axios from 'axios';
+ // 把axios写入Vue的原型对象，方便后面调用
+    Vue.prototype.$axios=axios;
+
+import "./sass/home_sreach.scss"
+import "./sass/home_carousel.scss"
+import "./sass/home_upload.scss"
+import "./sass/home_brand.scss"
+
+import "./sass/list.scss"
 export default {
   name: 'App',
   data(){

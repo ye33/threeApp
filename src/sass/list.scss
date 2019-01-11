@@ -1,0 +1,33 @@
+.mint-header{
+  background:#934D91;
+
+}
+
+
+.listcategory{
+    display:flex;
+            .list_l{
+            width: 83px;
+            height: 500px;
+            background:#F0F0F0;
+              li{
+                height: 35px;
+                width: 83px;
+               
+                padding-right:10px;
+                text-align:right;
+                color:#474747;
+                  }
+           }
+
+           .list_r{
+                width: 239px;
+                height: 100%;
+                h2{
+                   
+                    i{
+                       color:#FCB85A;
+                    }
+                }
+           }
+}

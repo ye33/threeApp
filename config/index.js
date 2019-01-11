@@ -10,7 +10,13 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable:{ 
+         '/dbapi':{
+            target:"https://wx.3hmlg.com/",//代理目标服务器
+            changeOrigin: true,
+            pathRewrite: {'^/dbapi' : ''}, //替换部分路径
+        }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
