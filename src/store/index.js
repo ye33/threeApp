@@ -35,7 +35,14 @@ export default new Vuex.Store({
                 icon:'icon-wode',
                 path:'/mine',
                 name:'mine'
-            }]
+            }],
+            selected:'home'
+
+    },
+    mutations:{
+        changeRouter(state,payload){
+            
+        }
     },
     // store模块化：底部列表各项的store
     modules:{

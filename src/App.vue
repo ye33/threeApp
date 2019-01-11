@@ -13,10 +13,13 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from 'vue';
 import mintUi from 'mint-ui';
 import 'mint-ui/lib/style.css';
 Vue.use(mintUi);
+
+import axios from 'axios';
+Vue.prototype.$axios=axios;
 
 export default {
   name: 'App',
@@ -41,7 +44,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: #f0f0f0;
+  padding-bottom:47px;
 }
 .mint-tabbar{
   background:#fff;

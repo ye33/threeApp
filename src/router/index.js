@@ -5,6 +5,7 @@ import list from '@/components/list';
 import service from '@/components/service';
 import cart from '@/components/cart';
 import mine from '@/components/mine';
+import login from '@/components/login';
 Vue.use(Router);
 
 // vue-router映射不同的组件
@@ -14,6 +15,7 @@ const routes=[
     {name:'service',path:'/service',component:service},
     {name:'cart',path:'/cart',component:cart},
     {name:'mine',path:'/mine',component:mine},
+    {name:'login',path:'/login',component:login},
     {path:'/',redirect:{name:'home'}}
 ]
 
