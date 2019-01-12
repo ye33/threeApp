@@ -11,7 +11,7 @@
             <span class="s3">查看全部</span>
         </div>
         <ul class="new_box">
-            <li class="newItem" v-for="item in goodsList_new" :key="item.goodsId">
+            <li class="newItem" v-for="item in goodsList_new" :key="item.goodsId" @click="goto">
                 <img :src="item.image" />
                 <p>{{item.name}}</p>
                 <span>¥{{item.price}}</span>
@@ -22,7 +22,6 @@
 </template>
 <script type="text/javascript">
 import imgurl1 from '@/img/xp_bg.dc7bd36.png';
-
 
 export default {
     data(){
@@ -40,7 +39,9 @@ export default {
         }
     },
     methods:{
-
+        goto(){
+            this.$router.push({name:'category'});
+        }
     },
     created(){
         this.$axios.get("/dbapi/index/data.action?").then(res=>{

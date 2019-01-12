@@ -21,6 +21,26 @@ Vue.use(mintUi);
 import axios from 'axios';
 Vue.prototype.$axios=axios;
 
+import { Indicator } from 'mint-ui';
+axios.interceptors.request.use(config => {
+    Indicator.open({
+      spinnerType: 'fading-circle'
+    });
+    return config
+}, error => {
+    Indicator.close();
+    return Promise.reject(error)
+})
+// http响应拦截器
+axios.interceptors.response.use(data => {
+    // 响应成功关闭loading
+    Indicator.close();
+    return data
+}, error => {
+    Indicator.close();
+    return Promise.reject(error)
+})
+
 export default {
   name: 'App',
   data(){
