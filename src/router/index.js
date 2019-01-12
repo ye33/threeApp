@@ -37,12 +37,12 @@ const routes=[
     {name:'cart',path:'/cart',component:cart,
                  // cart内配置子路由（嵌套路由）
         children:[
-                 {path:'',redirect:{name:'in_baby'}},
-                 {name:'in_baby',path:'in_baby',component:in_baby},
+               {path:'',redirect:{name:'in_baby'}},
+               {name:'in_baby',path:'in_baby',component:in_baby},
             //当url为/list/in_theaters匹配这个子路由
-            {name:'in_details',path:'in_details',component:in_details},
-            {name:'in_parameter',path:'in_parameter',component:in_parameter},
-            {name:'in_evaluation',path:'in_evaluation',component:in_evaluation}      
+            {name:'in_detail',path:'in_details',component:in_details},
+            {name:'in_parameters',path:'in_parameter',component:in_parameter},
+            {name:'in_evaluations',path:'in_evaluation',component:in_evaluation}      
             ]
   },
     {name:'mine',path:'/mine',component:mine},

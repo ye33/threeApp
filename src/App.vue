@@ -20,6 +20,14 @@ import mintUi from 'mint-ui';
 import 'mint-ui/lib/style.css';
 Vue.use(mintUi);
 
+
+
+// import iView from 'iview';
+// import 'iview/dist/styles/iview.css';    // 使用 CSS
+// Vue.use(iView);
+
+
+
 // 可能会有冲突
 import axios from 'axios';
  // 把axios写入Vue的原型对象，方便后面调用
