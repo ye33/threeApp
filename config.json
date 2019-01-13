@@ -1,0 +1,5 @@
+{
+    "port":4008,
+    "host":"localhost",
+    "root":"./"
+}
