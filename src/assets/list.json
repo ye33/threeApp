@@ -1,0 +1,438 @@
+{
+    "returnCode": 200,
+    "returnMsg": "ok",
+    "response": {
+        "msg": "ok",
+        "code": 200,
+        "resultList": {
+            "beautysayBanner": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201801/a9fff36e-7a00-4a5e-a0eb-84a9d0daadc0.png",
+            "shoppingList": [
+                {
+                    "width": "180px",
+                    "nodeId": "ab80761b-f607-4c67-862c-79a6580db4da",
+                    "height": "180px",
+                    "title": "经典",
+                    "type": "link",
+                    "params": "http://app.3hmlg.com/app/web/topicActivity/list.html?id=3",
+                    "extra": "3",
+                    "content": "永恒之美",
+                    "image": "http://img.3hmlg.com/upload/image/201812/1efc219e-cc52-4d8b-a594-f2a63188e72f.png",
+                    "y": "0px",
+                    "x": "0px"
+                },
+                {
+                    "width": "180px",
+                    "nodeId": "bb03d787-489a-43cd-b7c1-ef2a257e9f1c",
+                    "height": "180px",
+                    "title": "亚麻天地",
+                    "type": "link",
+                    "params": "http://app.3hmlg.com/app/web/topicActivity/list.html?id=4",
+                    "extra": "4",
+                    "content": "健康 环保 舒适",
+                    "image": "http://img.3hmlg.com/upload/image/201809/46b5abe7-c670-4903-a01e-9801a33d50c6.png",
+                    "y": "0px",
+                    "x": "210px"
+                },
+                {
+                    "width": "180px",
+                    "nodeId": "e1aba4d1-138f-4030-9329-50bf094dd7a1",
+                    "height": "180px",
+                    "title": "针织羊毛",
+                    "type": "link",
+                    "params": "http://app.3hmlg.com/app/web/topicActivity/list.html?id=7",
+                    "extra": "7",
+                    "content": "为你保暖护航",
+                    "image": "http://img.3hmlg.com/upload/image/201809/aa89fabf-62cc-44d4-b779-e647e9ace781.png",
+                    "y": "0px",
+                    "x": "420px"
+                },
+                {
+                    "width": "180px",
+                    "nodeId": "de8db0dc-1b9e-4d17-9cb9-a6c46c2aec00",
+                    "height": "180px",
+                    "title": "卫衣潮",
+                    "type": "link",
+                    "params": "http://app.3hmlg.com/app/web/topicActivity/list.html?id=6",
+                    "extra": "6",
+                    "content": "你有freestyle吗",
+                    "image": "http://img.3hmlg.com/upload/image/201809/fc1aa8d9-dce6-4c71-898b-b5b2159b680e.png",
+                    "y": "250px",
+                    "x": "0px"
+                },
+                {
+                    "width": "180px",
+                    "nodeId": "fd9cc44b-ac7e-4383-a4ba-565b15133bd4",
+                    "height": "180px",
+                    "title": "个性",
+                    "type": "link",
+                    "params": "http://app.3hmlg.com/app/web/topicActivity/list.html?id=10",
+                    "extra": "10",
+                    "content": "随性自由",
+                    "image": "http://img.3hmlg.com/upload/image/201812/bcbc8913-05b1-4811-80c5-96af2dec9863.png",
+                    "y": "250px",
+                    "x": "210px"
+                },
+                {
+                    "width": "180px",
+                    "nodeId": "6cc41d29-8762-488d-b644-e48cda5e55b3",
+                    "height": "180px",
+                    "title": "条纹控",
+                    "type": "link",
+                    "params": "http://app.3hmlg.com/app/web/topicActivity/list.html?id=8",
+                    "extra": "8",
+                    "content": "人手必备单品",
+                    "image": "http://img.3hmlg.com/upload/image/201809/34d6112d-9c70-4fdf-960c-ec4262338772.png",
+                    "y": "250px",
+                    "x": "420px"
+                },
+                {
+                    "width": "180px",
+                    "nodeId": "9bdf523b-7062-4acb-9d55-f190318099f9",
+                    "height": "180px",
+                    "title": "格子范",
+                    "type": "link",
+                    "params": "http://app.3hmlg.com/app/web/topicActivity/list.html?id=9",
+                    "extra": "9",
+                    "content": "文艺复古范儿",
+                    "image": "http://img.3hmlg.com/upload/image/201812/a06d9d21-b18e-44b2-9b83-e858836ce754.png",
+                    "y": "500px",
+                    "x": "0px"
+                },
+                {
+                    "width": "180px",
+                    "nodeId": "f68f1c1f-1ff9-4bab-93bf-d20c2a3552dd",
+                    "height": "180px",
+                    "title": "奢华",
+                    "type": "link",
+                    "params": "http://app.3hmlg.com/app/web/topicActivity/list.html?id=5",
+                    "extra": "5",
+                    "content": "优雅高端的格调",
+                    "image": "http://img.3hmlg.com/upload/image/201812/6a5d922b-5ab7-46ab-b925-74bf9e819882.png",
+                    "y": "500px",
+                    "x": "210px"
+                }
+            ],
+            "brandList": [
+                {
+                    "brandId": 2,
+                    "name": "新添吉",
+                    "introduction": "新添吉纺织品有限公司自1998年创建以来，一直秉承“自然、舒适、风尚、环保”的理念，以自然可分解的自然纤维为核心，开展产品的研发，运用特色花式纱生产别具风格的花式纱面料，同时，力求产品生产消耗的自然资源降到最小程度。对于产品的时尚度力求设计创新、科技创新，生态时尚是我们追求的目标。\r\n我们专注把产品做到物有所值，从设计生产、物流等每一个细节，我们都精准核算，优化流程，提高效率。",
+                    "logo": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/4fef42af-2579-48cb-a1d3-3fda9a4f0479.png",
+                    "goodsCount": 2167
+                },
+                {
+                    "brandId": 7,
+                    "name": "新宝吉",
+                    "introduction": "新宝吉：为了配合你高端精心的设计和高需求，我们会提供最好的梭织棉麻面料。 世界上最难的一件事，便是认真做好一件事。细腻精致的面料就像一双温暖的手，轻轻抚摸，紧紧拥抱；我们愿意花更多的时间去将梭织棉麻面料做到最好，做到极致。",
+                    "logo": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/f3eb8ef5-b5f5-4627-85fd-7334e6c7a583.png",
+                    "goodsCount": 201
+                },
+                {
+                    "brandId": 3,
+                    "name": "亚麻馆",
+                    "introduction": "亚麻馆：一个人是否大方优雅有气质，取决于她的内心；我们也坚信一件服装的质感如何，首先取决于面料优质与否。用最天然的亚麻纤维诠释对服装的喜爱和重视，以大气简单展现时尚态度、以感性与优雅演绎轻奢慢生活！专心于为独立、生活细节与质感高度追求的你提供最优质细腻的亚麻面料，是我们喜欢并坚持的事情。",
+                    "logo": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/6233fd86-c710-427d-9816-02952eb9ec27.png",
+                    "goodsCount": 26
+                },
+                {
+                    "brandId": 1,
+                    "name": "Helen's Studio",
+                    "introduction": "许多人为了一件服装而想去寻找匹配它的面料，不知你是否因找不到那个特定的面料而烦恼？清新文艺、酷炫帅气、嘻哈朋克，你喜欢的服装风格的面料我们都为你准备好了。趋时和灵敏的时尚嗅觉，让我们能够准确抓捕潮流的风向，并且为潮牌服装匹配相应的面料。为了匹配你用心的设计与殷切的需求，我们会为你提供最精致细腻、最优质天然的面料，以及简单便捷选购服务！",
+                    "logo": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/a169a36d-5fb0-4a42-8ce2-7e3c8d475971.png",
+                    "goodsCount": 16
+                },
+                {
+                    "brandId": 4,
+                    "name": "上善方",
+                    "introduction": "我们是一支拥有高端设备和高新技术的纱线、面料生产开发团队。采用最优质原产地的面料纤维，专用自然环保的染料；引入德国先进的纺织机器，力求把产品做到物有所值。以高质量苛求精细度，对生产设备和技术精益求精，从纱线的选择到面料织物的生成，我们层层严格把关。",
+                    "logo": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/81205211-a6af-48d9-87af-caa2beb1745e.png",
+                    "goodsCount": 12
+                },
+                {
+                    "brandId": 5,
+                    "name": "吉泓纺织",
+                    "introduction": "坐落于佛山南海区的提供面料采购服务的面料工厂，我们已在世界各地建立了长期稳定的合作平台和销售渠道，同时完善了公司物流架构。拥有最全面、最优质的面料和多种货物运输渠道，致力于向企业商家、设计师等合作方提供最便捷最迅速的面料采购服务！",
+                    "logo": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/06e6018e-0702-4389-92f3-a15bd8312bfc.png",
+                    "goodsCount": 11
+                }
+            ],
+            "beautifulTalkList": [
+                {
+                    "fashionId": "777048263063764992",
+                    "cover": "http://img.3hmlg.com/beautysay/upload/image/201901/5e9fc7b8-b510-4b99-9fb9-9ac1f14f7704.jpg",
+                    "title": "百搭王阔腿裤怎么穿得高级又时髦",
+                    "subTitle": "阔腿裤是女孩子们显瘦必备，遮肉修腿型，舒适又休闲，在各种场合都能扛住",
+                    "hits": 113,
+                    "hot": false,
+                    "top": false,
+                    "releasedTime": 1547016485000,
+                    "width": 727,
+                    "height": 1000,
+                    "image": "http://img.3hmlg.com/beautysay/upload/image/201901/5e9fc7b8-b510-4b99-9fb9-9ac1f14f7704.jpg?x-oss-process=image/crop,x_0,y_79,w_727,h_727",
+                    "isNew": true
+                },
+                {
+                    "fashionId": "776321114459602944",
+                    "cover": "http://img.3hmlg.com/beautysay/upload/image/201901/1bc7ed24-9fab-4210-901e-4112e7fedc3d.jpg",
+                    "title": "2019精致女孩穿西装千万别配西装裤",
+                    "subTitle": "2019女式西装外套，可不是正式、规矩、正装的代名词",
+                    "hits": 258,
+                    "hot": false,
+                    "top": false,
+                    "releasedTime": 1546843119000,
+                    "width": 1066,
+                    "height": 1600,
+                    "image": "http://img.3hmlg.com/beautysay/upload/image/201901/1bc7ed24-9fab-4210-901e-4112e7fedc3d.jpg?x-oss-process=image/crop,x_0,y_135,w_1060,h_1060",
+                    "isNew": true
+                },
+                {
+                    "fashionId": "774921771085201408",
+                    "cover": "http://img.3hmlg.com/beautysay/upload/image/201901/aa3e4cba-e5a5-4362-b6d0-91e3451bea95.jpg",
+                    "title": "准爸妈最该关注：买婴儿衣服3大误区",
+                    "subTitle": "不少父母觉得颜色多的可爱，实际上婴儿衣物的颜色不要太鲜艳",
+                    "hits": 320,
+                    "hot": false,
+                    "top": false,
+                    "releasedTime": 1546509489000,
+                    "width": 517,
+                    "height": 387,
+                    "image": "http://img.3hmlg.com/beautysay/upload/image/201901/aa3e4cba-e5a5-4362-b6d0-91e3451bea95.jpg?x-oss-process=image/crop,x_27,y_0,w_386,h_386",
+                    "isNew": false
+                },
+                {
+                    "fashionId": "774541327013511168",
+                    "cover": "http://img.3hmlg.com/beautysay/upload/image/201901/147b08fc-722b-4966-a08d-ce5c0fc1f1bb.jpg",
+                    "title": "不要毛裤腿！新年这样穿长高10厘米",
+                    "subTitle": "怎么把厚实毛裤穿得神不知鬼不觉",
+                    "hits": 249,
+                    "hot": false,
+                    "top": false,
+                    "releasedTime": 1546418784000,
+                    "width": 1066,
+                    "height": 1600,
+                    "image": "http://img.3hmlg.com/beautysay/upload/image/201901/147b08fc-722b-4966-a08d-ce5c0fc1f1bb.jpg?x-oss-process=image/crop,x_0,y_52,w_1065,h_1065",
+                    "isNew": false
+                }
+            ],
+            "goodsList_commend": [
+                {
+                    "goodsId": 2614,
+                    "name": "全棉毛圈卫衣布料",
+                    "spuId": "K303121-M",
+                    "image": "http://img.3hmlg.com/upload/image/201807/c0b48b65-e02f-40b4-8329-457253998164-thumbnail.jpg",
+                    "price": 35,
+                    "unit": "meter"
+                },
+                {
+                    "goodsId": 1614,
+                    "name": "细纺麻",
+                    "spuId": "F302518-M",
+                    "image": "http://img.3hmlg.com/upload/image/201809/48ae2838-cdc6-4351-8c8f-e6b82e4b1423-thumbnail.jpg",
+                    "price": 25,
+                    "unit": "meter"
+                },
+                {
+                    "goodsId": 1695,
+                    "name": "2001纯亚麻",
+                    "spuId": "W300233-M",
+                    "image": "http://img.3hmlg.com/upload/image/201809/6229970c-c62d-450c-9fb4-f3af2ec0dba7-thumbnail.jpg",
+                    "price": 40,
+                    "unit": "meter"
+                },
+                {
+                    "goodsId": 1673,
+                    "name": "双色亚麻斜纹",
+                    "spuId": "W300220-M",
+                    "image": "http://img.3hmlg.com/upload/image/201809/8a430f35-614c-43ee-bb96-b8e057e71181-thumbnail.jpg",
+                    "price": 30,
+                    "unit": "meter"
+                },
+                {
+                    "goodsId": 1358,
+                    "name": "32S精梳罗纹拉架",
+                    "spuId": "A0339",
+                    "image": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/f77b5f58-84f3-4c9d-8f76-c617ab9ae47f-thumbnail.jpg",
+                    "price": 56.8,
+                    "unit": "kilogram"
+                },
+                {
+                    "goodsId": 123,
+                    "name": "加厚坑条",
+                    "spuId": "A0360",
+                    "image": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201706/e79623f8-06bb-4e92-855c-00e21fb297c4-thumbnail.jpg",
+                    "price": 122.8,
+                    "unit": "kilogram"
+                },
+                {
+                    "goodsId": 118,
+                    "name": "6S粗仿麻大卫衣",
+                    "spuId": "K302848",
+                    "image": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201706/2e2718a2-80c7-41fa-8419-399825cbc0ef-thumbnail.jpg",
+                    "price": 38.8,
+                    "unit": "kilogram"
+                },
+                {
+                    "goodsId": 1150,
+                    "name": "精纺棉大卫衣抓毛",
+                    "spuId": "K302868",
+                    "image": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/c6618eb7-3df0-4a5f-b03d-74e27b8549b8-thumbnail.jpg",
+                    "price": 35.8,
+                    "unit": "kilogram"
+                },
+                {
+                    "goodsId": 160,
+                    "name": "雪绒棉",
+                    "spuId": "K302881",
+                    "image": "http://img.3hmlg.com/upload/image/201901/f7440fc7-3873-44a3-a940-5b45aa2ce101-thumbnail.jpg",
+                    "price": 41.8,
+                    "unit": "kilogram"
+                },
+                {
+                    "goodsId": 1812,
+                    "name": "精纺棉大卫衣摇粒绒",
+                    "spuId": "K302880",
+                    "image": "http://img.3hmlg.com/upload/image/201807/cf974279-f70c-4411-8117-56cf1920dc01-thumbnail.jpg",
+                    "price": 39.8,
+                    "unit": "kilogram"
+                }
+            ],
+            "topicList": [
+                {
+                    "width": "445px",
+                    "nodeId": "caf67383-e50a-430f-9e7a-18ec5236492e",
+                    "height": "260px",
+                    "type": "topic",
+                    "params": "4",
+                    "image": "http://img.3hmlg.com/upload/image/201812/c46e4476-d095-4c03-9cfc-41e75ba14f01.png",
+                    "y": "0px",
+                    "x": "0px"
+                },
+                {
+                    "width": "202px",
+                    "nodeId": "25272614-75e7-46e5-bd10-629b7eb4eba9",
+                    "height": "260px",
+                    "type": "topic",
+                    "params": "5",
+                    "image": "http://img.3hmlg.com/upload/image/201812/87f13450-c475-4fe1-bcfe-bb56852002b7.png",
+                    "y": "0px",
+                    "x": "460px"
+                },
+                {
+                    "width": "215px",
+                    "nodeId": "78b0276d-363e-495b-bc54-b48b5c0655a8",
+                    "height": "260px",
+                    "type": "topic",
+                    "params": "12",
+                    "image": "http://img.3hmlg.com/upload/image/201812/2a3db624-fccb-4a2d-83e7-347e89036539.png",
+                    "y": "300px",
+                    "x": "0px"
+                },
+                {
+                    "width": "215px",
+                    "nodeId": "b69abdb4-d59d-4631-a43d-8f150ee14f6b",
+                    "height": "260px",
+                    "title": "",
+                    "type": "topic",
+                    "params": "13",
+                    "content": "",
+                    "image": "http://img.3hmlg.com/upload/image/201812/e344518b-896d-4a62-9f5d-615d7c9879b2.png",
+                    "y": "300px",
+                    "x": "230px"
+                },
+                {
+                    "width": "202px",
+                    "nodeId": "abf37ec5-300f-4728-b849-c7ef099ed0e1",
+                    "height": "260px",
+                    "title": "",
+                    "type": "topic",
+                    "params": "11",
+                    "content": "",
+                    "image": "http://img.3hmlg.com/upload/image/201812/2e6dd758-43b9-47bf-a77b-864666018e29.png",
+                    "y": "300px",
+                    "x": "460px"
+                },
+                {
+                    "width": "215px",
+                    "nodeId": "d8520959-ebe4-43b4-be96-6d4d89b3da95",
+                    "height": "260px",
+                    "title": "",
+                    "type": "topic",
+                    "params": "8",
+                    "content": "",
+                    "image": "http://img.3hmlg.com/upload/image/201812/508f5886-a457-4782-8ca0-68843bd44205.png",
+                    "y": "600px",
+                    "x": "0px"
+                },
+                {
+                    "width": "215px",
+                    "nodeId": "9aa021cf-2bd7-4820-a6e8-2e1ddd6069c9",
+                    "height": "260px",
+                    "type": "topic",
+                    "params": "9",
+                    "image": "http://img.3hmlg.com/upload/image/201812/d0c23ef2-b00e-4eca-8a51-fa7d2217123e.png",
+                    "y": "600px",
+                    "x": "230px"
+                },
+                {
+                    "width": "202px",
+                    "nodeId": "1f36dfec-06ab-4b86-a211-2af5d6d5ed05",
+                    "height": "260px",
+                    "type": "topic",
+                    "params": "10",
+                    "image": "http://img.3hmlg.com/upload/image/201812/7c2344a5-d02c-4f69-bf03-02c1ba4734cc.png",
+                    "y": "600px",
+                    "x": "460px"
+                }
+            ],
+            "goodsList_new": [
+                {
+                    "goodsId": 2614,
+                    "name": "全棉毛圈卫衣布料",
+                    "spuId": "K303121-M",
+                    "image": "http://img.3hmlg.com/upload/image/201807/c0b48b65-e02f-40b4-8329-457253998164-thumbnail.jpg",
+                    "price": 35,
+                    "unit": "meter"
+                },
+                {
+                    "goodsId": 1677,
+                    "name": "2836纯亚麻",
+                    "spuId": "W300227-M",
+                    "image": "http://img.3hmlg.com/upload/image/201806/1b962758-bf74-406d-b1e2-4531c66f6103-thumbnail.jpg",
+                    "price": 30,
+                    "unit": "meter"
+                },
+                {
+                    "goodsId": 2159,
+                    "name": "纯亚麻1*1间条",
+                    "spuId": "K302996-M",
+                    "image": "http://img.3hmlg.com/upload/image/201809/83ee6bb0-cecc-42ff-b5fa-c91eebb2a092-thumbnail.jpg",
+                    "price": 50,
+                    "unit": "meter"
+                },
+                {
+                    "goodsId": 1303,
+                    "name": "100D奶丝拉架抓毛",
+                    "spuId": "TJ1070",
+                    "image": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201712/955547fb-f5f8-4f7d-af74-27f24566701e-thumbnail.jpg",
+                    "price": 30,
+                    "unit": "kilogram"
+                },
+                {
+                    "goodsId": 2192,
+                    "name": "7支粗斜磨毛",
+                    "image": "http://img.3hmlg.com/upload/image/201809/db67246b-5e72-4724-beef-45a1c1b007de-thumbnail.jpg",
+                    "price": 15,
+                    "unit": "meter"
+                },
+                {
+                    "goodsId": 1168,
+                    "name": "40支纯棉拉架食毛",
+                    "spuId": "A0282",
+                    "image": "http://3hmlg.oss-cn-shenzhen.aliyuncs.com/upload/image/201711/e62d2b48-ceba-4ce7-ae9e-c8a84a18e5a4-thumbnail.jpg",
+                    "price": 43.8,
+                    "unit": "kilogram"
+                }
+            ]
+        }
+    }
+}

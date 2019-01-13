@@ -3,9 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
+
+
+
 import store from './store/'
 import './assets/base.css'
 import './assets/icon/iconfont.css'
+import "./assets/base.css"
 
 new Vue({
   el: '#app',
@@ -15,4 +20,5 @@ new Vue({
   store,
   // 渲染
   render:h=>h(App)
+
 })

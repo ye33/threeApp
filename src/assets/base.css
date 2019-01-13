@@ -17,8 +17,9 @@ header,footer,section,main,nav{
 body{
     font-size:0.375rem;
     font-family:"微软雅黑";
-    // color:#3e3e3e;
+    color:#3e3e3e;
 }
+
 .fl {
     float:left;
 }
@@ -33,6 +34,7 @@ body{
 .clearfix{
     *zoom:1;/*IE/7/6*/
 }
+
 a{
     text-decoration:none;
     color:#000;

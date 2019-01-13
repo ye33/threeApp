@@ -1,0 +1,50 @@
+.home_upload{
+    width: 322px;
+    height: 358px;
+    padding-top:7px;
+    background: #F0F0F0;
+   padding-left:5px;
+    padding-right:10px;
+    .home_uploadtop{
+        width: 307px;
+        height: 109px;
+      
+        display:flex;
+        flex-direction:row;
+           .home_uploadtopleft{
+               
+                height: 109px;
+                width: 204px;
+                position:relative;
+                  img{
+                     height: 109px;
+                     width: 204px;
+                  }
+           }
+           .home_uploadtopright{
+                width: 102px;
+                height: 109px;
+                position:relative;
+                margin-left:1px;
+                    img{
+                      width: 102px;
+                      height: 109px;
+                  }
+           }
+    }
+    .home_uploadbottom{
+        width: 307px;
+        height: 246px;
+ 
+          display:flex;
+          flex-wrap:wrap;
+            li{
+              
+            
+               img{
+                width: 102px;
+                height: 122px;
+            }
+       }
+    }
+}

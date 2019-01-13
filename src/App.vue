@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <!-- 路由视图 -->
     <router-view/>
     <mt-tabbar v-model="selected" fixed>
@@ -13,13 +14,23 @@
 </template>
 
 <script>
+
 import Vue from 'vue';
+
 import mintUi from 'mint-ui';
 import 'mint-ui/lib/style.css';
 Vue.use(mintUi);
 
+// 可能会有冲突
 import axios from 'axios';
-Vue.prototype.$axios=axios;
+ // 把axios写入Vue的原型对象，方便后面调用
+    Vue.prototype.$axios=axios;
+
+import "./sass/home_sreach.scss"
+import "./sass/home_carousel.scss"
+import "./sass/home_upload.scss"
+import "./sass/home_brand.scss"
+import "./sass/list.scss"
 
 import { Indicator } from 'mint-ui';
 axios.interceptors.request.use(config => {
@@ -54,10 +65,12 @@ export default {
       this.$router.replace({path});
     }
   }
+
 }
 </script>
 
 <style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -66,7 +79,10 @@ export default {
   color: #2c3e50;
   background-color: #f0f0f0;
   padding-bottom:47px;
+  height:100%;
+  min-height:640px;
 }
+
 .mint-tabbar{
   background:#fff;
 }
@@ -85,3 +101,4 @@ export default {
   margin-bottom:3px;
 }
 </style>
+
