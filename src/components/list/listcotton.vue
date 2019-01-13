@@ -30,10 +30,10 @@
 
 <style lang="scss">
     .listcotton{
-
+                height:100%;
         div{
                 width:242px;
-               margin-bottom:10px;
+             
                 overflow:hidden;
             
                 p{
@@ -56,8 +56,10 @@
                   
                     li{
                         width:80px;
-                        height:23px;
+                        height:30px;
                         float:left;
+                        
+
                     }
         }
     }

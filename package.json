@@ -11,6 +11,11 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1",
+
     "mint-ui": "^2.2.13",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.2",

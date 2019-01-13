@@ -37,7 +37,7 @@
         
 
         <ul class="carbottom">
-            <li> <input type="text" /></li>
+            <li> <input type="checkbox" /></li>
             <li>全选</li>
             <li><h3>总价：<span>￥42.0</span></h3><p>共1种1.0米</p></li>
             <li>结算</li>

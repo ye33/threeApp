@@ -15,18 +15,11 @@
 
 <script>
 
-import Vue from 'vue'
+import Vue from 'vue';
+
 import mintUi from 'mint-ui';
 import 'mint-ui/lib/style.css';
 Vue.use(mintUi);
-
-
-
-// import iView from 'iview';
-// import 'iview/dist/styles/iview.css';    // 使用 CSS
-// Vue.use(iView);
-
-
 
 // 可能会有冲突
 import axios from 'axios';
@@ -37,8 +30,28 @@ import "./sass/home_sreach.scss"
 import "./sass/home_carousel.scss"
 import "./sass/home_upload.scss"
 import "./sass/home_brand.scss"
-
 import "./sass/list.scss"
+
+import { Indicator } from 'mint-ui';
+axios.interceptors.request.use(config => {
+    Indicator.open({
+      spinnerType: 'fading-circle'
+    });
+    return config
+}, error => {
+    Indicator.close();
+    return Promise.reject(error)
+})
+// http响应拦截器
+axios.interceptors.response.use(data => {
+    // 响应成功关闭loading
+    Indicator.close();
+    return data
+}, error => {
+    Indicator.close();
+    return Promise.reject(error)
+})
+
 export default {
   name: 'App',
   data(){
@@ -57,7 +70,18 @@ export default {
 </script>
 
 <style>
- 
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  background-color: #f0f0f0;
+  padding-bottom:47px;
+  height:100%;
+  min-height:640px;
+}
 
 .mint-tabbar{
   background:#fff;

@@ -10,7 +10,12 @@ import cart from '@/components/cart';
             import in_parameter from '@/components/cart/in_parameter';
             import in_evaluation from '@/components/cart/in_evaluation';
 import mine from '@/components/mine';
+
 import SearchList from '@/components/SearchList';
+
+import login from '@/components/login';
+import category from '@/components/category';
+
 Vue.use(Router);
 
 
@@ -47,8 +52,14 @@ const routes=[
             ]
   },
     {name:'mine',path:'/mine',component:mine},
+
     {path:'/',redirect:{name:'home'}},
       {name:'searchlist',path:'/searchlist',component:SearchList},
+
+    {name:'login',path:'/login',component:login},
+    {name:'category',path:'/category',component:category},
+  
+
 ]
 
 // 实例路由

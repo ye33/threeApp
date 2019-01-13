@@ -8,6 +8,7 @@ import router from './router'
 
 
 import store from './store/'
+import './assets/base.css'
 import './assets/icon/iconfont.css'
 import "./assets/base.css"
 

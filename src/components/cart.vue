@@ -1,5 +1,6 @@
 <template>
     <div class="page cart">
+
          <mt-header title="秋冬服运动毛圈布现货服装针织">
             <router-link to="/" slot="left">
             <mt-button icon="back"></mt-button>
@@ -105,8 +106,9 @@ import "../sass/in_baby.scss"
 
 
 <style  lang="scss">
-    .cart{
+   #app .cart{
             position:relative;
+            text-align:left;
             .buycart{
                 position:absolute;
                 top:9px;
@@ -162,5 +164,6 @@ import "../sass/in_baby.scss"
 
     }
 }
+
 
 </style>

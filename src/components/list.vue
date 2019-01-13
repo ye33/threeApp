@@ -1,4 +1,5 @@
 <template> 
+
     <div class="list">
 
         <mt-header title="商品列表">
@@ -9,7 +10,7 @@
     
         <div class="listcategory">
         <ul class="list_l">
-            <li v-for="(item,idx) in goodslist" :key="idx" @click="changeCid(item.id)">{{item.category}}</li>
+            <li v-for="(item,idx) in goodslist" :key="idx" :class="{'active':current==idx}" @click="changeCid(item.id)">{{item.category}}</li>
         </ul> 
         <div class="list_r">
           
@@ -19,6 +20,7 @@
       </div>
        
 </div>
+
 </template>
 
 <script type="text/javascript">
@@ -96,6 +98,5 @@ import listcotton from './list/listcotton.vue';
 </script>
 
 <style type="text/css">
-    
 
 </style>
