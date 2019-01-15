@@ -51,7 +51,7 @@ export default new Vuex.Store({
     },
     actions:{
         getData(context,payload){
-           axios.get("http://10.3.141.145:4008/detail?goodsid="+payload.goodsId).then(res=>{
+           axios.get("http://39.108.252.230:4008/detail?goodsid="+payload.goodsId).then(res=>{
             context.commit('changeData',{...payload,res});
             })
         }

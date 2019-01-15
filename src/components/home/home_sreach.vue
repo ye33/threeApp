@@ -1,3 +1,4 @@
+
 <template> 
     <div class="home_sreach">
           <span class="iconfont camera"> &#xe61d;</span>
@@ -9,12 +10,14 @@
       
      </mt-search>
 
-        
-       
-    </div>
+
+		
+
+	</div>
 </template>
 
 <script type="text/javascript">
+
 
 
     export default{
@@ -25,14 +28,15 @@
         },
       methods:{
         goto(){        
-            this.$router.push({path:'searchlist'});
+            this.$router.push({name:'searchlist',params:{
+                        params:4
+                    }});
         }
     },
     }
+
 </script>
 
-<style lang="scss" >
-
-    
+<style lang="scss">
 
 </style>

@@ -1,19 +1,67 @@
-<template> 
-    <div class="detail">
-        <p>
-            <span class="iconfont icon-shouji"></span>
-            <input type="text" placeholder="手机号码"/>
-        </p>
-        <p>
-            <span class="iconfont icon-wode"></span>
-            <input type="password" placeholder="密码"/>
-        </p>
-        <input type="button" class="myBtn" value='登录'>
-    </div>
+<template>
+  <div class="detail">
+    <p>
+      <span class="iconfont icon-shouji"></span>
+      <input type="text" v-model="tel" placeholder="手机号码" />
+    </p>
+    <p>
+      <span class="iconfont icon-wode"></span>
+      <input type="password" v-model="password" placeholder="密码" />
+    </p>
+    <p>{{infor}}</p>
+    <input type="button" class="myBtn" value='登录' @click="goto">
+  </div>
 </template>
-
 <script type="text/javascript">
-    export default{
-        
+export default {
+  data() {
+    return {
+      tel: '',
+      password: '',
+      infor: ''
     }
+  },
+  methods: {
+    goto() {
+
+        let postData = this.$qs.stringify({
+            tel: this.tel,
+            password: this.password
+        });
+
+      this.$axios.post('http://39.108.252.230:4008/login', postData)
+        .then((res) =>{
+          if (res.data.code == 0) {
+              this.infor = "您尚未注册"
+            } else if (res.data.code == 2) {
+              this.infor = "您输入的号码或密码有误"
+            } else {
+              document.cookie = "tel=" + this.tel;
+              this.$router.push({
+                name: "home"
+              });
+            }
+        })
+        .catch((error)=> {
+          console.log(error);
+        });
+
+
+      // this.$axios.get("http://localhost:4008/login?tel=" + this.tel + "&password=" + this.password).then(res => {
+      //   console.log(res);
+      //   if (res.data.code == 0) {
+      //     this.infor = "您尚未注册"
+      //   } else if (res.data.code == 2) {
+      //     this.infor = "您输入的号码或密码有误"
+      //   } else {
+      //     document.cookie = "tel=" + this.tel;
+      //     this.$router.push({
+      //       name: "home"
+      //     });
+      //   }
+      // })
+    }
+  }
+}
+
 </script>

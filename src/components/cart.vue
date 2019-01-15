@@ -106,9 +106,7 @@ import "../sass/shoppingcar.scss"
                 }
           },
              
-
-
-              
+            
  methods:{
     numDecrease(idx){
 
@@ -142,14 +140,14 @@ import "../sass/shoppingcar.scss"
         },
 
            created(){
-            this.$axios.get("http://10.3.141.145:4008/order").then(res=>{
+            this.$axios.get("http://39.108.252.230:4008/order").then(res=>{
                 let data=res.data;
-                console.log(data);
+                // console.log(data);
                 this.carlist=data.data;
                 // this.sendData=data[0].data;
 
-                console.log(data);
-                console.log("this.carlist",this.carlist);
+                // console.log(data);
+                // console.log("this.carlist",this.carlist);
                 // console.log("this.sendData",this.sendData);
             });
       

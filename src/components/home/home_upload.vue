@@ -1,8 +1,9 @@
+
 <template> 
     <div class="home_upload">
         
         <ul class="home_uploadbottom">
-                <li v-for="(item,idx) in recommend" @click="goto" 
+                <li v-for="(item,idx) in recommend" @click="goto(item.params)" 
                  :key="idx" 
                  :id="item._id">
                   
@@ -12,6 +13,7 @@
             
         </ul>
     </div>
+
 </template>
 
 <script type="text/javascript">
@@ -27,10 +29,10 @@ export default{
       
         created(){
 
-        this.$axios.get("http://10.3.141.145:4008/themeList2").then(res=>{
+        this.$axios.get("http://39.108.252.230:4008/themeList2").then(res=>{
                 let data=res.data.data;
                
-               console.log("list:",data);
+               // console.log("list:",data);
 
                 this.recommend=data;
                  // console.log(this.recommend);
@@ -38,15 +40,16 @@ export default{
             });
         },
         methods:{
-        goto(){
-            this.$router.push({name:'searchlist'});
+        goto(cid){
+            this.$router.push({name:'searchlist',params:{
+                        params:cid
+                    }});
         }
     }
     }
+
 </script>
 
-<style lang="scss" >
-
-    
+<style lang="scss">
 
 </style>

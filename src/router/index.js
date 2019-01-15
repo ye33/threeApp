@@ -2,43 +2,91 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import home from '@/components/home';
 import list from '@/components/list';
-         import listcotton from '@/components/list/listcotton';
+import listcotton from '@/components/list/listcotton';
 import service from '@/components/service';
 import cart from '@/components/cart';
+
 
 import DataList from '@/components/DataList';
             import in_baby from '@/components/DataList/in_baby';
             import in_details from '@/components/DataList/in_details';
             import in_parameter from '@/components/DataList/in_parameter';
             import in_evaluation from '@/components/DataList/in_evaluation';
+
+// import in_baby from '@/components/cart/in_baby';
+// import in_details from '@/components/cart/in_details';
+// import in_parameter from '@/components/cart/in_parameter';
+// import in_evaluation from '@/components/cart/in_evaluation';
+
 import mine from '@/components/mine';
 
 import SearchList from '@/components/SearchList';
 
 import login from '@/components/login';
 import category from '@/components/category';
+import fashiondetail from '@/components/fashiondetail';
+
 
 Vue.use(Router);
 
-
 // vue-router映射不同的组件
-const routes=[
-    {name:'home',path:'/home',component:home},
-    {name:'list',path:'/list',component:list,
-             children:[
-             // {path:'/',component:listcotton},
-             {path:'0',component:listcotton},
+const routes = [{
+		name: 'home',
+		path: '/home',
+		component: home
+	},
+	{
+		name: 'list',
+		path: '/list',
+		component: list,
+		children: [
+			// {path:'/',component:listcotton},
+			{
+				path: '0',
+				component: listcotton
+			},
 
-              {path:'1',component:listcotton},
-              {path:'2',component:listcotton},
-              {path:'3',component:listcotton},
-              {path:'4',component:listcotton},
-              {path:'5',component:listcotton},
-              {path:'6',component:listcotton},
-              {path:'7',component:listcotton},
-              {path:'8',component:listcotton},
-              {path:'9',component:listcotton},
-              {path:'10',component:listcotton}
+			{
+				path: '1',
+				component: listcotton
+			},
+			{
+				path: '2',
+				component: listcotton
+			},
+			{
+				path: '3',
+				component: listcotton
+			},
+			{
+				path: '4',
+				component: listcotton
+			},
+			{
+				path: '5',
+				component: listcotton
+			},
+			{
+				path: '6',
+				component: listcotton
+			},
+			{
+				path: '7',
+				component: listcotton
+			},
+			{
+				path: '8',
+				component: listcotton
+			},
+			{
+				path: '9',
+				component: listcotton
+			},
+			{
+				path: '10',
+				component: listcotton
+			}
+
 
                 ]},
     {name:'service',path:'/service',component:service},
@@ -64,16 +112,28 @@ const routes=[
                   ]
                 },
 
-    {name:'login',path:'/login',component:login},
-    {name:'category',path:'/category',component:category},
-  
+
+	{
+		name: 'login',
+		path: '/login',
+		component: login
+	},
+	{
+		name: 'category',
+		path: '/category',
+		component: category
+	},{
+		name: 'fashiondetail',
+		path: '/fashiondetail',
+		component: fashiondetail
+	}
 
 ]
 
 // 实例路由
-let router=new Router({
-    // 配置路由
-    routes
+let router = new Router({
+	// 配置路由
+	routes
 });
 
 export default router;

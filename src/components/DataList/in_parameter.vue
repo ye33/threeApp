@@ -28,9 +28,10 @@
                 // imgs:[]
             }
         },
-        mounted(){console.log(123);
+        mounted(){
+       
           // console.log("this.data",this.data);
-          console.log('kkk',this.$store.state.data);
+          // console.log('kkk',this.$store.state.data);
           this.datalist=this.$store.state.data;
         }
     }
