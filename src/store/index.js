@@ -3,6 +3,8 @@ import Vuex from 'vuex';
 import cart from './cart';
 import goods from './goods';
 Vue.use(Vuex);
+import axios from 'axios';
+ // 把axios写入Vue的原型对象，方便后面调用
 
 // vuex的使用
 // 1、创建store
@@ -36,12 +38,22 @@ export default new Vuex.Store({
                 path:'/mine',
                 name:'mine'
             }],
-            selected:'home'
+            selected:'home',
+            data:{}
 
     },
     mutations:{
-        changeRouter(state,payload){
-            
+        changeData(state,payload){
+            state.data=payload.res.data.data;
+            console.log("11",state.data);
+
+        }
+    },
+    actions:{
+        getData(context,payload){
+           axios.get("http://10.3.141.145:4008/detail?goodsid="+payload.goodsId).then(res=>{
+            context.commit('changeData',{...payload,res});
+            })
         }
     },
     // store模块化：底部列表各项的store

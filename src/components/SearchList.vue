@@ -4,16 +4,11 @@
     <mt-search
       v-model="keyword"
       cancel-text="取消"
-      placeholder="搜索"
+      placeholder="请输入关键字"
       autofocus
       @input="search"
     >
-       
-
-
       
-
-
     </mt-search>
      <mt-navbar>
               <mt-tab-item id="1">综合</mt-tab-item>
@@ -22,11 +17,10 @@
               <mt-tab-item id="3">价格</mt-tab-item>
               <mt-tab-item id="3">新品</mt-tab-item>
               <mt-tab-item id="3">筛选</mt-tab-item>
-             
-
+            
       </mt-navbar>
       <ul class="list">
-    <li v-for="item in result" :key="item.spuId" @click.native="goto(item.spuId)">
+    <li v-for="item in result" :id="item.goodsId"  :key="item.goodsId" @click="goto(item.goodsId)">
         <span class="pic"><img :src="item.image"/></span>
         
           <p>{{item.name}}</p>
@@ -61,9 +55,9 @@ export default {
 
       if (!this.keyword) return;
 
-      this.timer = setTimeout(() => {
+      this.timer = setTimeout(() =>{
         this.$axios
-          .get("/dbapi/search/data.action?page=1&keyword=亚麻", {
+          .get("http://10.3.141.145:4008/good/goodsHot", {
             params: {
               q: this.keyword
             }
@@ -72,20 +66,33 @@ export default {
             let data = res.data;
             console.log(data);
 
-            this.result = data.response.goodsList;
+            this.result=data.data;
           });
       }, 1000);
     },
-    goto(id){
-      this.$router.push({path:'/detail/'+id})
+    goto(goodsId){
+      console.log('/DataList/'+goodsId);
+      this.$store.dispatch('getData',{goodsId});
+      this.$router.push({path:'/DataList/'+goodsId})
       // this.$router.push({name:'Detail',params:{id},query:{keyword:'xxx'}})
     }
   },
+
   created() {
     console.log(this.keyword);
     // 路由传参：缺点：获取繁琐
     // this.keyword = this.$route.params.keyword;
-    this.search()
+    this.search();
+
+        this.$axios.get("http://10.3.141.145:4008/good/goodsHot").then(res=>{
+               let data = res.data;
+            console.log(data);
+
+            this.result=data.data;
+               
+            });
+   
+
   }
 };
 </script>

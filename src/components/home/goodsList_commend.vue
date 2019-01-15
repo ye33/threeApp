@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </li>
-            <li class="newItem" v-for="item in goodsList_commend" :key="item.goodsId">
+            <li class="newItem" v-for="item in goodsList_commend" :key="item.goodsId" @click="goto(item.goodsId)">
                 <p>{{item.name}}</p>
                 <span>¥{{item.price}}</span>
                 <img :src="item.image" />
@@ -45,7 +45,10 @@ export default {
         }
     },
     methods:{
-
+        goto(goodsId){
+            console.log(1222);
+            this.$router.push({path:'DataList',goodsId});
+        }
     },
     created(){
         this.$axios.get("/dbapi/index/data.action?").then(res=>{

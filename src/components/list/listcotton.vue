@@ -6,7 +6,7 @@
 
           <p><i>◆</i>{{item.name}}</p> 
             <ul>
-                <li v-for="content in item.data">{{content.name}}</li>
+                <li v-for="content in item.data">{{content}}</li>
             </ul>
        </div>
     </div>

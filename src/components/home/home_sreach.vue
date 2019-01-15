@@ -4,7 +4,8 @@
       <mt-search
           v-model="value"
           cancel-text="登录"
-          placeholder="输入关键字">
+          placeholder="输入关键字"
+            @input="goto">
       
      </mt-search>
 
@@ -22,6 +23,11 @@
                value:""
             }
         },
+      methods:{
+        goto(){        
+            this.$router.push({path:'searchlist'});
+        }
+    },
     }
 </script>
 

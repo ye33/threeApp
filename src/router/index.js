@@ -5,10 +5,12 @@ import list from '@/components/list';
          import listcotton from '@/components/list/listcotton';
 import service from '@/components/service';
 import cart from '@/components/cart';
-            import in_baby from '@/components/cart/in_baby';
-            import in_details from '@/components/cart/in_details';
-            import in_parameter from '@/components/cart/in_parameter';
-            import in_evaluation from '@/components/cart/in_evaluation';
+
+import DataList from '@/components/DataList';
+            import in_baby from '@/components/DataList/in_baby';
+            import in_details from '@/components/DataList/in_details';
+            import in_parameter from '@/components/DataList/in_parameter';
+            import in_evaluation from '@/components/DataList/in_evaluation';
 import mine from '@/components/mine';
 
 import SearchList from '@/components/SearchList';
@@ -40,21 +42,27 @@ const routes=[
 
                 ]},
     {name:'service',path:'/service',component:service},
-    {name:'cart',path:'/cart',component:cart,
+    {name:'cart',path:'/cart',component:cart},
+
+    {path:'/DataList/:id',component:DataList
                  // cart内配置子路由（嵌套路由）
-        children:[
-               {path:'',redirect:{name:'in_baby'}},
-               {name:'in_baby',path:'in_baby',component:in_baby},
-            //当url为/list/in_theaters匹配这个子路由
-            {name:'in_detail',path:'in_details',component:in_details},
-            {name:'in_parameters',path:'in_parameter',component:in_parameter},
-            {name:'in_evaluations',path:'in_evaluation',component:in_evaluation}      
-            ]
+        // children:[
+        //        {path:'',redirect:{name:'in_baby'}},
+        //        {name:'in_baby',path:'in_baby',component:in_baby},
+        //     //当url为/list/in_theaters匹配这个子路由
+        //     {name:'in_detail',path:'in_details',component:in_details},
+        //     {name:'in_parameters',path:'in_parameter',component:in_parameter},
+        //     {name:'in_evaluations',path:'in_evaluation',component:in_evaluation}      
+        //     ]
   },
     {name:'mine',path:'/mine',component:mine},
 
     {path:'/',redirect:{name:'home'}},
-      {name:'searchlist',path:'/searchlist',component:SearchList},
+    {name:'searchlist',path:'/searchlist',component:SearchList,
+       children:[
+                  {path:'',redirect:{name:'searchlist'} }
+                  ]
+                },
 
     {name:'login',path:'/login',component:login},
     {name:'category',path:'/category',component:category},

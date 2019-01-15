@@ -27,12 +27,13 @@
         },
       
         created(){
-            this.$axios.get("/dbapi/index/data.action?").then(res=>{
-                let data=res.data.response.resultList.brandList;
+            this.$axios.get("http://10.3.141.145:4008/brands").then(res=>{
+                let data=res.data.data;
                
+               console.log("brand:",data);
 
                 this.recommend=data;
-                 console.log(this.recommend);
+                 // console.log(this.recommend);
                
             });
         }

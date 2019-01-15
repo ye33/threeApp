@@ -80,7 +80,7 @@ export default {
   background-color: #f0f0f0;
   padding-bottom:47px;
   height:100%;
-  min-height:640px;
+  min-height:568px;
 }
 
 .mint-tabbar{
