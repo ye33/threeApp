@@ -1,36 +1,75 @@
 .search-list {
-    height: 100%;
-    .mint-search {
-        height: 100%;
+  height: 100%;
+  .mint-search {
+    height: 8vh;
+
+    .mint-searchbar {
+      background-color: #944d91;
+
+      .mint-searchbar-inner {
+        border-radius: 16px;
+        background-color: #c9a6c8;
+
+        input::-webkit-input-placeholder {
+          color: #fff;
+        }
+        .mint-searchbar-core {
+          padding-left: 8px;
+          background-color: #c9a6c8;
+          color: #fff;
+        }
+      }
+
+      .mint-searchbar-cancel {
+        display: block !important;
+        color: #fff;
+      }
+
+      .mint-search-list {
+        display: block !important;
+      }
     }
-    .list {
+  }
+
+  .list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: #f0f0f0;
+    margin-bottom: 45px;
+    li:nth-child(2n + 1) {
+      margin-right: 5px;
+    }
+    li {
+      // width: 151px;
+      width: 49%;
+
+      img {
+        // width: 151px;
+        // height: 158px;
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        background: #F0F0F0;
-        li:nth-child(2n+1) {
-            margin-right: 5px;
+        height: 80%;
+      }
+
+      p:nth-of-type(1) {
+        // width: 151px;
+        width: 100%;
+        height: 18px;
+        overflow: hidden;
+        font-size: 14px;
+        color: #686868;
+      }
+
+      p:nth-of-type(2) {
+        font-size: 14px;
+        color: #ee805d;
+        font-weight: 900;
+        line-height: 26px;
+        span {
+          font-size: 10px;
+          color: #c5c5c5;
         }
-        li {
-            width: 151px;
-            img {
-                width: 151px;
-                height: 158px;
-            }
-            P:nth-of-type(1) {
-                font-size: 12px;
-                color: #686868;
-            }
-            P:nth-of-type(2) {
-                font-size: 12px;
-                color: #EE805D;
-                font-weight: 900;
-                line-height: 26px;
-                span {
-                    font-size: 10px;
-                    color: #C5C5C5;
-                }
-            }
-        }
+      }
     }
+  }
 }
