@@ -2,12 +2,12 @@
   <div class="page search-list">
     <mt-search v-model="keyword" cancel-text="取消" placeholder="请输入关键字" autofocus @input="search"></mt-search>
     <mt-navbar>
-      <mt-tab-item id="1" @click.native="changeGoods('goodsId')">综合</mt-tab-item>
-      <mt-tab-item id="2" @click.native="changeGoods('orignal')">销量</mt-tab-item>
-      <mt-tab-item id="3" @click.native="changeGoods('hot')">人气</mt-tab-item>
-      <mt-tab-item id="3" @click.native="changeGoods('price')">价格</mt-tab-item>
-      <mt-tab-item id="3" @click.native="changeGoods('time')">新品</mt-tab-item>
-      <mt-tab-item id="3">筛选</mt-tab-item>
+      <mt-tab-item id="1" @click.native="changeGoods('goodsId','1')" :class="{'active':current=='1'}">综合</mt-tab-item>
+      <mt-tab-item id="2" @click.native="changeGoods('orignal','2')" :class="{'active':current=='2'}">销量</mt-tab-item>
+      <mt-tab-item id="3" @click.native="changeGoods('hot','3')" :class="{'active':current=='3'}">人气</mt-tab-item>
+      <mt-tab-item id="4" @click.native="changeGoods('price','4')" :class="{'active':current=='4'}">价格</mt-tab-item>
+      <mt-tab-item id="5" @click.native="changeGoods('time','5')" :class="{'active':current=='5'}">新品</mt-tab-item>
+      <mt-tab-item id="6"  @click.native="changeGoods('time','6')" :class="{'active':current=='6'}">筛选</mt-tab-item>
     </mt-navbar>
     <ul class="list">
       <li v-for="item in result" :id="item.goodsId" :key="item.goodsId" @click="goto(item.goodsId)">
@@ -58,7 +58,8 @@ export default {
       timer: null,
       result: [],
       selected: "",
-      paramss: ""
+      paramss: "",
+      current:'1'
     };
   },
   methods: {
@@ -100,7 +101,8 @@ export default {
       this.$router.push({ path: "/DataList/" + goodsId });
       // this.$router.push({name:'Detail',params:{id},query:{keyword:'xxx'}})
     },
-    changeGoods(rule) {
+    changeGoods(rule,id) {
+      this.current=id;
       this.paramss = this.$route.params.params;
       if (this.paramss == "11" || this.paramss == "12" || this.paramss == "13") {
         this.paramss = "8";
@@ -128,7 +130,7 @@ export default {
     this.search();
 
     this.$axios
-      .get("http://39.108.252.230:4008/themeList1/" + this.paramss)
+      .get("http://39.108.252.230:4008/themeList1/" + this.paramss+ "?rule=goodsId")
       .then(res => {
         let data = res.data;
         // console.log(data);
@@ -139,5 +141,9 @@ export default {
 };
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
+
+  .active {
+      background: #ccc;
+    }
 </style>

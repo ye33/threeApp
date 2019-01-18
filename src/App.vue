@@ -116,8 +116,13 @@ export default {
   height: 100%;
   min-height: 610px;
   overflow-x:hidden;
+  display:flex;
+  flex-direction:column;
 }
 
+.home{
+  flex:1;
+}
 .mint-tabbar {
   background: #fff;
 }

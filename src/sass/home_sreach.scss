@@ -1,6 +1,8 @@
 .home_sreach {
-  position: relative;
+  position: fixed;
   height: 36px;
+  z-index:10;
+  width:100%;
 
   .camera {
     position: absolute;

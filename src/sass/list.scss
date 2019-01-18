@@ -1,7 +1,9 @@
 .mint-header {
   background: #934d91;
-  // position:fixed;
-  // top:0px;
+  position:fixed;
+  top:0px;
+  width:100%;
+  z-index:10;
 }
 
 .list {
@@ -22,8 +24,9 @@
     flex:1;
     height: 500px;
     background: #f0f0f0;
-    // position:fixed;
-    // top:20px;
+    position:fixed;
+    top:0px;
+    margin-top:40px;
     // border:1px solid #ccc;
     li {
       height: 35px;
@@ -38,7 +41,9 @@
   }
   .list_r {
     flex:3;
-    // position: relative;
+    margin-top:40px;
+    position: relative;
+    margin-left:82px;
     // left: -10px;
     // width: 239px;
     min-height: 640px;

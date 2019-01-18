@@ -22,7 +22,7 @@
           :key="item.goodsId"
           @click="goto(item.goodsId)"
         >
-          <p>{{item.name.slice(0,6)}}</p>
+          <p>{{item.name.slice(0,5)}}</p>
           <span>¥{{item.price}}</span>
           <img :src="item.image">
         </li>
