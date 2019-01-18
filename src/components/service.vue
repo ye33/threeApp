@@ -1,3 +1,30 @@
+
+<template>
+  <div class="service">
+    <img src="../img/service.png" />
+  </div>
+</template>
+
+<script type="text/javascript">
+export default {
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style lang="scss" >
+ .service{
+	width:100%;
+	height:100%;
+  img{
+	width:100%;
+	height:100%;
+}
+ }
+</style>
+
+<!-- =======
 <template>
 	<div class="page">
 		<mt-header title="购物车">
@@ -22,8 +49,8 @@
 						<p>￥{{item.price}}<span>/米  </span></p>
 					</div>
 					<div class="right">
-						<!-- 购物车的加减          -->
-						<span class="mark" @click.stop="numDecrease(idx)">-</span>
+						<!-购物车的加减          -->
+		<!-- 				<span class="mark" @click.stop="numDecrease(idx)">-</span>
 						<input type="text" v-model="item.number" step="0.1" min="1" class="cacul" @input="updatatotal()" /><span class="mark" @click.stop="numAdd(idx)">+</span>
 					</div>
 				</div>
@@ -92,7 +119,7 @@
 
 				//遍历整个数组如果有状态等于true 的  id或者idx的价格乘以数量 推进数组里面  然后再次遍历所有项 相加
 				//
-				console.log(123)
+				
 				var newArr = [];
 				let total = 0;
 				let qty = 0;
@@ -144,3 +171,4 @@
 
 	}
 </script>
+ -->

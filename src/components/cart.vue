@@ -1,150 +1,177 @@
 <template>
-	<div class="page cart">
+  <div class="page">
+    <mt-header title="购物车">
+      <router-link to="/" slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
 
-		<mt-header title="秋冬服运动毛圈布现货服装针织">
-			<router-link to="/" slot="left">
-				<mt-button icon="back"></mt-button>
-			</router-link>
+      <mt-button slot="right">编辑</mt-button>
+    </mt-header>
 
-			<mt-button="iconfont">&#xe606;</mt-button>
-				<mt-button icon="more" slot="right"></mt-button>
-		</mt-header>
-		<span class="iconfont buycart">&#xe606;</span>
+    <ul>
+      <li
+        class="shoppingcar"
+        v-for="(item,idx) in carlist"
+        :key="item.id"
+        :idx="idx"
+        @click="selectItem(!item.selected,idx)"
+      >
+        <div class="shoppingcar_t">
+          <input type="checkbox" :checked="item.selected">
+          <img :src="item.image" alt>
+          <span>{{item.name}}</span>
+        </div>
 
-		<mt-navbar v-model="selected">
-			<mt-tab-item :id="tab.name" :key="tab.name" v-for="tab in tabs" @click.native="goto(tab.name)">{{tab.title}}</mt-tab-item>
-		</mt-navbar>
+        <div class="shoppingcar_b">
+          <div class="left">
+            <h3>色号：7#</h3>
+            <p>
+              ￥{{item.price}}
+              <span>/米</span>
+              <Button class="removeItem" @click.stop="removeItem(item.goodsId,idx)">删除</Button>
+            </p>
+          </div>
+          <div class="right">
+            <!-- 购物车的加减          -->
+            <span class="mark" @click.stop="numDecrease(item.goodsId,idx)">-</span>
+            <input
+              type="text"
+              v-model="item.number"
+              step="0.1"
+              min="1"
+              class="cacul"
+              @input="updatatotal()"
+            >
+            <span class="mark" @click.stop="numAdd(item.goodsId,idx)">+</span>
+          </div>
+        </div>
+      </li>
+    </ul>
 
-		<router-view/>
-
-		<div class="datalistbottom">
-			<mt-tabbar v-model="choosed" fixed>
-				<mt-tab-item :id="tab.name" v-for="tab in buycar" :key="tab.name" @click.native="goto(tab.path)">
-					<span :class="['iconfont',tab.icon]"></span>
-					<span class="text">{{tab.text}}</span>
-				</mt-tab-item>
-			</mt-tabbar>
-		</div>
-
-	</div>
+    <ul class="carbottom">
+      <li>
+        <input type="checkbox" v-model="checkAll">
+      </li>
+      <li>全选</li>
+      <li>
+        <h3>总价：
+          <span>￥{{updatatotal}}</span>
+        </h3>
+        <p>共{{updataNum}}种1.0米</p>
+      </li>
+      <li>结算</li>
+    </ul>
+  </div>
 </template>
-<script>
-	import "../sass/in_baby.scss"
-	export default {
-		data() {
-			return {
-				buycar: [{
-					text: '客服',
-					icon: 'icon-kefu',
-					path: '/s',
-					name: 'a'
-				}, {
-					text: '收藏',
-					icon: 'icon-shoucang',
-					path: '/s',
-					name: 'list'
-				}, {
-					text: '拿色卡',
-					icon: 'icon-biaoqian',
-					path: '/s',
-					name: 'r'
-				}, {
-					text: '加入购物车',
-					icon: 'icon-gouwuche',
-					path: '/s',
-					name: 'cart'
-				}, {
-					text: '立即购买',
-					icon: 'icon-tubiaolunkuo-',
-					path: '/s',
-					name: 'mine'
-				}],
 
-				tabs: [{
-						title: "宝贝",
-						name: "in_baby"
-					},
-					{
-						title: "详情",
-						name: "in_details"
-					},
-					{
-						title: "参数",
-						name: "in_parameter"
-					},
-					{
-						title: "评价",
-						name: "in_evaluation"
-					}
-				],
+<script type="text/javascript">
+import "../sass/shoppingcar.scss";
+export default {
+  data() {
+    return {
+      carlist: [],
+      sumPrice: 0, //合计金额
+      totalNumber: 0 //总数
+    };
+  },
 
-				selected: 'in_baby',
-				choosed: 'cart'
-			}
-		},
-		methods: {
-			goto(name) {
-				this.$router.push({
-					path: '/cart/' + name
-				});
-			}
-		},
-		mounted() {
+  computed: {
+    checkAll: {
+      get() {
+        return this.carlist.every(item => item.selected);
+      },
+      set(checked) {
+        this.carlist.forEach(item => {
+          item.selected = checked;
+        });
+      }
+    },
+    //计算总金额总数量
+    updatatotal() {
+      //遍历整个数组如果有状态等于true 的  id或者idx的价格乘以数量 推进数组里面  然后再次遍历所有项 相加
 
-		},
+      var newArr = [];
+      let total = 0;
+      let qty = 0;
+      this.carlist.forEach(item => {
+        if (item.selected) {
+          qty++;
+          total += item.price * item.number;
+          newArr.push(total);
+        }
+      });
+      this.totalNumber = qty;
+      return total.toFixed(2);
+    },
 
-		watch: {
-			$route(val, oldval) {
+    //计算总数量
+    updataNum() {
+      let qty = 0;
+      this.carlist.forEach(item => {
+        if (item.selected) {
+          qty++;
+        }
+      });
+      this.totalNumber = qty;
+      return qty;
+    }
+  },
 
-			}
-		}
-	}
+  methods: {
+    numDecrease(goodsid,idx) {
+      this.carlist[idx].number = (this.carlist[idx].number * 10 - 1) / 10;
+      let number=this.carlist[idx].number;
+      let postData = this.$qs.stringify({
+          goodsid: goodsid,
+          number: number
+      });
+      this.$axios.post('http://39.108.252.230:4008/order/updategood',postData).then(res=>{
+      })
+    },
+    numAdd(goodsid,idx) {
+      this.carlist[idx].number = (this.carlist[idx].number * 10 + 1) / 10;
+      let number=this.carlist[idx].number;
+      let postData = this.$qs.stringify({
+          goodsid: goodsid,
+          number: number
+      });
+      this.$axios.post('http://39.108.252.230:4008/order/updategood',postData).then(res=>{
+      })
+    },
+    removeItem(goodsid,idx) {
+      this.$axios.get('http://39.108.252.230:4008/order/delete?goodsid='+goodsid).then(res=>{
+        this.carlist.splice(idx, 1);
+      })
+      // this.carlist.splice(idx, 1);
+    },
+
+    // 修改selected属性（选中或不选）
+    selectItem(checked, idx) {
+      // 全部操作
+      if (idx === undefined) {
+        this.carlist.forEach(item => {
+          item.selected = checked;
+        });
+      }
+
+      // 单个操作
+      else {
+        this.carlist[idx].selected = checked;
+      }
+    }
+  },
+
+  created() {
+    this.$axios.get("http://39.108.252.230:4008/order").then(res => {
+      let data = res.data;
+      // console.log(data);
+      this.carlist = data.data;
+      // this.sendData=data[0].data;
+
+      // console.log(data);
+      // console.log("this.carlist",this.carlist);
+      // console.log("this.sendData",this.sendData);
+    });
+  }
+};
 </script>
-
-<style lang="scss">
-	#app .cart {
-		position: relative;
-		text-align: left;
-		.buycart {
-			position: absolute;
-			top: 9px;
-			right: 39px;
-		}
-		.datalistbottom {
-			width: 100%;
-			height: 46px;
-			position: fixed;
-			bottom: 0px;
-			z-index: 300;
-			.icon-gouwuche {
-				display: none;
-			}
-			.icon-tubiaolunkuo- {
-				display: none;
-			}
-			.mint-tab-item:nth-of-type(4) {
-				text-align: center;
-				width: 20px;
-				height: 47px;
-				background: #F4C43B;
-				.text {
-					line-height: 40px;
-				}
-			}
-			.mint-tab-item:nth-of-type(5) {
-				text-align: center;
-				width: 20px;
-				height: 47px;
-				background: #934D91;
-				.text {
-					line-height: 40px;
-					color: #fff;
-				}
-			}
-		}
-		.mint-header {
-			background: pink;
-			border: 1px solid #ccc;
-		}
-	}
-</style>
