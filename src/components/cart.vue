@@ -7,8 +7,11 @@
 
       <mt-button slot="right">编辑</mt-button>
     </mt-header>
-
-    <ul>
+    <div class="isLogin" v-show="!isCookie">
+      您尚未登录
+      <input class="gotoLogin" type="button" value="点我登录" @click="gotoLogin">
+    </div>
+    <ul class="cartlist" v-show="isCookie">
       <li
         class="shoppingcar"
         v-for="(item,idx) in carlist"
@@ -66,10 +69,12 @@
 
 <script type="text/javascript">
 import "../sass/shoppingcar.scss";
+import Cookie from '@/assets/Cookie';
 export default {
   data() {
     return {
       carlist: [],
+      isCookie:false,
       sumPrice: 0, //合计金额
       totalNumber: 0 //总数
     };
@@ -144,7 +149,10 @@ export default {
       })
       // this.carlist.splice(idx, 1);
     },
-
+    // 未登录跳转
+     gotoLogin() {
+      this.$router.push({path: "/login"});
+    },
     // 修改selected属性（选中或不选）
     selectItem(checked, idx) {
       // 全部操作
@@ -166,12 +174,33 @@ export default {
       let data = res.data;
       // console.log(data);
       this.carlist = data.data;
-      // this.sendData=data[0].data;
-
-      // console.log(data);
-      // console.log("this.carlist",this.carlist);
-      // console.log("this.sendData",this.sendData);
+       if(Cookie.get('tel')){
+          this.isCookie=true;
+        }else{
+          this.isCookie=false;
+        }
     });
   }
 };
 </script>
+
+<style lang="scss">
+  .isLogin{
+    color:#934d91;
+    position:absolute;
+    top:120px;
+    right:0;
+    left:0;
+    font-size:16px;
+  }
+  .gotoLogin{
+    display:block;
+    width:25%;
+    height:36px;
+    font-weight:900;
+    font-size:16px;
+    color:#666;
+    margin:10px auto;
+    background:#ccc;
+  }
+</style>

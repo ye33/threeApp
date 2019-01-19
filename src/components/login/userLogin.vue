@@ -13,6 +13,7 @@
   </div>
 </template>
 <script type="text/javascript">
+import Cookie from '@/assets/Cookie';
 export default {
   data() {
     return {
@@ -36,14 +37,14 @@ export default {
           } else if (res.data.code == 2) {
             this.infor = "您输入的号码或密码有误";
           } else {
-            document.cookie = "tel=" + this.tel;
+            Cookie.set('tel',this.tel,{});
             this.$router.push({
               name: "home"
             });
           }
         })
         .catch(error => {
-          console.log(error);
+          // console.log(error);
         });
     }
   },

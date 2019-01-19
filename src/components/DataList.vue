@@ -38,6 +38,7 @@ import in_baby from '@/components/DataList/in_baby';
 import in_details from '@/components/DataList/in_details';
 import in_parameter from '@/components/DataList/in_parameter';
 import in_evaluation from '@/components/DataList/in_evaluation';
+import Cookie from '@/assets/Cookie';
 
     export default {
         data() {
@@ -104,19 +105,23 @@ import in_evaluation from '@/components/DataList/in_evaluation';
             // },
             gotoPath(path){
                 if(path=="cart"){
-                    let goodsData=this.$store.state.data;
-                    console.log(goodsData);
-                    let postData = this.$qs.stringify({
-                        goodsid: goodsData.goodsId,
-                        number: 1.0,
-                        name:goodsData.name,
-                        image:goodsData.image,
-                        price:goodsData.price
-                    });
-
-                    this.$axios.post('http://39.108.252.230:4008/order/addgood',postData).then(res=>{
-                        this.$router.push({path:'/cart'});
-                    });
+                     if(Cookie.get('tel')){
+                        let goodsData=this.$store.state.data;
+                        let qty=this.$store.state.number;
+                        // console.log(goodsData);
+                        let postData = this.$qs.stringify({
+                            goodsid: goodsData.goodsId,
+                            number: qty,
+                            name:goodsData.name,
+                            image:goodsData.image,
+                            price:goodsData.price
+                        });
+                        this.$axios.post('http://39.108.252.230:4008/order/addgood',postData).then(res=>{
+                            this.$router.push({path:'/cart'});
+                        });
+                    }else{
+                        this.$router.push({path:'/login'});
+                    }
                 }else{
                 this.$router.push({path:'/DataList/'+path});
                }
@@ -209,6 +214,9 @@ import in_evaluation from '@/components/DataList/in_evaluation';
         background:#944D91;
         border:1px solid #ccc;
 
+    }
+    .mint-navbar{
+        margin-top:41px;
     }
 }
 

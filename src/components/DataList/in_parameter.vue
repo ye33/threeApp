@@ -8,6 +8,11 @@
       <p>
         <img :src="datalist.image">
       </p>
+      <!-- <mt-popup
+              
+                position="bottom">
+                下部弹出
+                </mt-popup>  -->
     </ul>
   </div>
 </template>
@@ -38,5 +43,10 @@ export default {
 <style lang="scss">
 .imgs img {
   width: 100%;
+}
+
+.mint-popup{
+  width: 50px;
+  height: 50px;
 }
 </style>

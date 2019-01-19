@@ -29,8 +29,9 @@ export default {
   },
   methods: {
     goto(cid) {
+      // console.log('liebiao id',cid)
       this.$router.push({
-        name: "searchlist",
+        name: "themeList",
         params: {
           params: cid
         }

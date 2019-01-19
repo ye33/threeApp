@@ -15,6 +15,7 @@
 </template>
 
 <script type="text/javascript">
+import Cookie from '@/assets/Cookie';
 export default {
   data() {
     return {
@@ -67,9 +68,9 @@ export default {
           .post("http://39.108.252.230:4008/register/add", postData)
           .then(res => {
             if (res.data.code == 0) {
-              console.log(res);
+              // console.log(res);
             } else {
-              document.cookie = "tel=" + this.tel;
+              Cookie.set('tel',this.tel,{});
               this.$router.push({
                 name: "home"
               });

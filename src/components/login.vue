@@ -71,13 +71,7 @@ export default {
   beforeMount() {
     this.current = this.tabs[0];
     // if(document.cookie('tel')){
-    // 	this.noCookie=false;
-    // }
-  },
-  mounted() {
-    // console.log(document.cookie('tel'));
-    // if(document.cookie('tel')){
-    // 	this.hasCookie=true;
+    //  this.noCookie=false;
     // }
   }
 };
