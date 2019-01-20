@@ -87,10 +87,6 @@ export default {
       this.current=id;
       if(this.$route.params.lid){
       this.lid = this.$route.params.lid;
-      // if (this.lid == "11" || this.lid == "12" || this.lid == "13") {
-      //   this.lid = "8";
-      // }
-      // this.search();
 
       this.$axios
         .get("http://39.108.252.230:4008/list/subList/" + this.lid + "?rule=" + rule)
@@ -123,11 +119,6 @@ export default {
     // 路由传参：缺点：获取繁琐
     this.lid = this.$route.params.lid;
     this.keyword=this.$route.params.name;
-    // console.log(this.$route.params);
-    // if (this.lid == "11" || this.lid == "12" || this.lid == "13") {
-    //   this.lid = "8";
-    // }
-    // this.search();
 
     this.$axios
       .get("http://39.108.252.230:4008/list/subList/" + this.lid+ "?rule=goodsId")
@@ -143,12 +134,12 @@ export default {
 </script>
 <style lang="scss" >
 .search-list{
-  height:0px;
+  width:100%;
+  height:100%;
+  background-color: #f0f0f0;
 }
-
 .mint-search-list{
- height:0px;
-
+  height:0px;
 }
 .search-list .list li {
     height:198px;

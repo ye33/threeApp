@@ -46,10 +46,10 @@ export default new Vuex.Store({
     mutations:{
         changeData(state,payload){
             state.data=payload.res.data.data;
-            console.log("11",state.data);
+            // console.log("11",state.data);
         },
         changeqty(state,payload){
-            console.log(payload);
+            // console.log(payload);
             state.number=payload.number;
             // state.number=payload.res;
         }

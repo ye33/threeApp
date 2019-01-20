@@ -69,6 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 .category{
+  width:100%;
   display:flex;
   flex-direction:column;
 }
@@ -102,6 +103,7 @@ export default {
 }
 
 .goodsList {
+  width:100%;
   flex:1;
   margin-top:160px;
   padding: 0 8px 40px 8px;

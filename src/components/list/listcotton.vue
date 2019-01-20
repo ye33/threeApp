@@ -48,8 +48,6 @@ export default {
 .listcotton {
   height: 100%;
   div {
-    width: 242px;
-
     overflow: hidden;
 
     p {
@@ -67,8 +65,6 @@ export default {
     }
 
     ul {
-      width: 242px;
-
       li {
         width: 80px;
         height: 30px;

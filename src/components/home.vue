@@ -36,11 +36,4 @@ export default {
 </script>
 
 <style lang="scss">
-        
-    .home{
-        display:flex;
-        flex-direction:column;
-    }
-
-
 </style>
