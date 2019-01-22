@@ -67,7 +67,7 @@ export default {
   },
   created() {
     this.$axios.get("http://39.108.252.230:4008/good/goodsHot").then(res => {
-      this.goodsList_commend = res.data.data.slice(0, 3);
+      this.goodsList_commend = res.data.data.slice(5,8 );
     });
   }
 };
@@ -121,10 +121,10 @@ export default {
 
         img {
           display: inline-block;
-          width: 75px;
-          height: 70px;
+          width: 90px;
+          height: 80px;
           border-radius: 8px;
-          margin: 3px 0 0 5px;
+          margin: 3px 0 0 0px;
         }
 
         p,

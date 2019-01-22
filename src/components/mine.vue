@@ -34,7 +34,6 @@
 
 <script type="text/javascript">
 import imgurl from "@/img/my_bg.6f93e28.png";
-import Cookie from '@/assets/Cookie';
 export default {
   data() {
     return {
@@ -127,14 +126,15 @@ export default {
       });
     },
     exit(){
-      Cookie.remove('tel');
+      localStorage.clear();
       this.noLogin=true;
     }
   },
   mounted(){
-    if(Cookie.get('tel')){
-      let tel=Cookie.get('tel').slice(3,9);
-      this.usertel=Cookie.get('tel').replace(tel,'**');
+    if(localStorage.getItem("tokenData")){
+      let storage=JSON.parse(localStorage.getItem("tokenData"));
+      let tel=(storage.tel).slice(3,9);
+      this.usertel=(storage.tel).replace(tel,'**');
         this.noLogin=false;
       }else{
         this.noLogin=true;

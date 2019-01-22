@@ -69,7 +69,6 @@
 
 <script type="text/javascript">
 import "../sass/shoppingcar.scss";
-import Cookie from '@/assets/Cookie';
 export default {
   data() {
     return {
@@ -169,13 +168,26 @@ export default {
     }
   },
 
-  created() {
+   created() {
     this.$axios.get("http://39.108.252.230:4008/order").then(res => {
       let data = res.data;
       // console.log(data);
       this.carlist = data.data;
-       if(Cookie.get('tel')){
-          this.isCookie=true;
+
+       if(localStorage.getItem("tokenData")){
+        let storage=JSON.parse(localStorage.getItem("tokenData"));
+        let token=storage.token;
+        this.$axios.get('http://39.108.252.230:4008/token',{
+          headers:{
+            token
+          }
+        }).then(res=>{
+          if(res.data.code==200){
+            this.isCookie=true;
+          }else{
+            this.isCookie=false;
+          }
+        });
         }else{
           this.isCookie=false;
         }

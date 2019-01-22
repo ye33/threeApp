@@ -15,7 +15,6 @@
 </template>
 
 <script type="text/javascript">
-import Cookie from '@/assets/Cookie';
 export default {
   data() {
     return {
@@ -70,7 +69,10 @@ export default {
             if (res.data.code == 0) {
               // console.log(res);
             } else {
-              Cookie.set('tel',this.tel,{});
+              let storage={'token':res.data.token,'tel':res.data.data}
+              storage=JSON.stringify(storage);
+              localStorage.setItem('tokenData', storage);
+              
               this.$router.push({
                 name: "home"
               });

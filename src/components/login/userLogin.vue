@@ -13,7 +13,6 @@
   </div>
 </template>
 <script type="text/javascript">
-import Cookie from '@/assets/Cookie';
 export default {
   data() {
     return {
@@ -29,6 +28,7 @@ export default {
         password: this.password
       });
 
+
       this.$axios
         .post("http://39.108.252.230:4008/login", postData)
         .then(res => {
@@ -37,7 +37,10 @@ export default {
           } else if (res.data.code == 2) {
             this.infor = "您输入的号码或密码有误";
           } else {
-            Cookie.set('tel',this.tel,{});
+            let storage={'token':res.data.token,'tel':res.data.data}
+            storage=JSON.stringify(storage);
+            localStorage.setItem('tokenData', storage);
+            
             this.$router.push({
               name: "home"
             });

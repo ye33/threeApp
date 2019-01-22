@@ -29,7 +29,7 @@ export default {
   // props:['keyword'],
   data() {
     return {
-      keyword: "",
+      keyword: "亚麻",
       timer: null,
       result: [],
       selected: "",

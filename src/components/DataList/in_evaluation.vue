@@ -24,11 +24,25 @@ export default {
 </script>
 
 <style lang="scss">
+.DataList{
+  width:100%;
+}
+.mint-navbar{
+  width:100%;
+  display:flex;
+}
+ .mint-tab-item{
+   flex:1;
+ }
 .in_evaluation {
   width: 100%;
-  height: 452px;
+  // height:100%;
+  min-height: 600px;
   background: #f0f0f0;
   position: relative;
+
+
+
   .nodata {
     width: 163px;
     height: 187px;

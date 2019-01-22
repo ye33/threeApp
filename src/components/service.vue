@@ -335,7 +335,6 @@ methods: {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
 }
 .mint-tabbar.is-fixed{
   z-index:2;
