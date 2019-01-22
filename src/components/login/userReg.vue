@@ -67,9 +67,12 @@ export default {
           .post("http://39.108.252.230:4008/register/add", postData)
           .then(res => {
             if (res.data.code == 0) {
-              console.log(res);
+              // console.log(res);
             } else {
-              document.cookie = "tel=" + this.tel;
+              let storage={'token':res.data.token,'tel':res.data.data}
+              storage=JSON.stringify(storage);
+              localStorage.setItem('tokenData', storage);
+              
               this.$router.push({
                 name: "home"
               });

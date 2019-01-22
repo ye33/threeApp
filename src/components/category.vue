@@ -158,6 +158,7 @@ export default {
 }
 
 .bigImg {
+  width:76%;
   img {
     width: 100%;
   }
@@ -169,7 +170,9 @@ export default {
 }
 
 .goodsList {
-  padding: 0 8px;
+  width:76%;
+  flex:1;
+  padding: 0 8px 10x 8px;
   li {
     padding: 10px;
     background: #fff;

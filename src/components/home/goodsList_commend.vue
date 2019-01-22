@@ -56,17 +56,18 @@ export default {
       // this.$router.push({name:'Detail',params:{id},query:{keyword:'xxx'}})
     },
     gotoList() {
-      this.$router.push({
+       this.$router.push({
         name: "searchlist",
         params: {
-          params: 6
+          lid: 3,
+          name:''
         }
       });
     }
   },
   created() {
     this.$axios.get("http://39.108.252.230:4008/good/goodsHot").then(res => {
-      this.goodsList_commend = res.data.data.slice(0, 4);
+      this.goodsList_commend = res.data.data.slice(5,8 );
     });
   }
 };
@@ -111,7 +112,7 @@ export default {
       }
       li {
         // flex:1;
-        width:22%;
+        width:30%;
         color: #474747;
         font-size: 12px;
         font-weight: 600;
@@ -120,10 +121,10 @@ export default {
 
         img {
           display: inline-block;
-          width: 70px;
-          height: 70px;
+          width: 90px;
+          height: 80px;
           border-radius: 8px;
-          margin: 3px 0 0 5px;
+          margin: 3px 0 0 0px;
         }
 
         p,

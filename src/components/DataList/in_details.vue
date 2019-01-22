@@ -31,6 +31,12 @@ export default {
 </script>
 
 <style lang="scss">
+.DataList{
+  width:100%;
+  .mint-navbar{
+    width:100%;
+  }
+}
 .imgs img {
   width: 100%;
 }

@@ -116,13 +116,13 @@ export default {
         width: 45%;
         position: relative;
         border-radius: 5px;
-        margin-bottom: 3px;
+        margin-bottom: 6px;
         img {
           width: 100%;
           height: 80px;
         }
         > div {
-          width: 114px;
+          width: 100%;
           height: 40px;
           text-align: center;
           color: #eea;

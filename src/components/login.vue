@@ -71,19 +71,14 @@ export default {
   beforeMount() {
     this.current = this.tabs[0];
     // if(document.cookie('tel')){
-    // 	this.noCookie=false;
-    // }
-  },
-  mounted() {
-    // console.log(document.cookie('tel'));
-    // if(document.cookie('tel')){
-    // 	this.hasCookie=true;
+    //  this.noCookie=false;
     // }
   }
 };
 </script>
 <style lang="scss">
 .login {
+  width:100%;
   font-size:14px;
   padding: 30px 8px 0 8px;
   .mint-header {

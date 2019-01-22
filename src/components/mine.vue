@@ -12,8 +12,9 @@
         </ul>
       </div>
       <div class="login">
-        <span class="iconfont icon-wode" @click="goto('login')"></span>
-        <p @click="goto('login')">登录/注册</p>
+        <span class="iconfont icon-wode"></span>
+        <p @click="goto('login')"  v-show="noLogin">登录/注册</p>
+        <p @click="exit" v-show="!noLogin">用户：{{usertel}}&nbsp;退出</p>
       </div>
     </div>
     <ul class="goodStatus">
@@ -33,12 +34,13 @@
 
 <script type="text/javascript">
 import imgurl from "@/img/my_bg.6f93e28.png";
-
 export default {
   data() {
     return {
       imgurl,
       skip: false,
+      noLogin:true,
+      usertel:'',
       goodStatus: [
         {
           status: "待付款",
@@ -122,7 +124,21 @@ export default {
       this.$router.push({
         name
       });
+    },
+    exit(){
+      localStorage.clear();
+      this.noLogin=true;
     }
+  },
+  mounted(){
+    if(localStorage.getItem("tokenData")){
+      let storage=JSON.parse(localStorage.getItem("tokenData"));
+      let tel=(storage.tel).slice(3,9);
+      this.usertel=(storage.tel).replace(tel,'**');
+        this.noLogin=false;
+      }else{
+        this.noLogin=true;
+      }
   }
 };
 </script>
@@ -174,7 +190,7 @@ export default {
         font-size: 32px;
       }
       p {
-        color: #000;
+        color: #666;
         margin-top: 3px;
         font-weight: 300;
       }

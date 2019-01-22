@@ -1,13 +1,13 @@
 <template>
   <div class="listcotton">
     <!-- <h2><i>◆</i>主要分类</h2> -->
-    <div v-for="item in goodslist" :id="item.idx"  >
+    <div v-for="(item,idx) in goodslist" :id="item.idx" :key="idx" >
       <p>
         <i>◆</i>
         {{item.name}}
       </p>
       <ul>
-        <li v-for="(content,idx) in item.data" :key="idx">{{content}}</li>
+        <li v-for="(content,idx) in item.data" :key="idx" @click="goto">{{content}}</li>
       </ul>
     </div>
   </div>
@@ -17,12 +17,29 @@ export default {
   props: {
     goodslist: {
       type: Array
+    },
+    lid:{
+      type:Number
+    },
+    name:{
+      type:String
     }
   },
   data() {
     return {
       datalist: []
-    };
+    }
+  },
+  methods:{
+    goto(){
+      this.$router.push({
+        name: "searchlist",
+        params: {
+          lid: this.lid,
+          name:this.name
+        }
+      });
+    }
   }
 };
 </script>
@@ -31,8 +48,6 @@ export default {
 .listcotton {
   height: 100%;
   div {
-    width: 242px;
-
     overflow: hidden;
 
     p {
@@ -50,8 +65,6 @@ export default {
     }
 
     ul {
-      width: 242px;
-
       li {
         width: 80px;
         height: 30px;

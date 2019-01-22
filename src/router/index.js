@@ -24,6 +24,7 @@ import SearchList from "@/components/SearchList";
 import login from "@/components/login";
 import category from "@/components/category";
 import fashiondetail from "@/components/fashiondetail";
+import themeList from "@/components/themeList";
 
 Vue.use(Router);
 
@@ -109,8 +110,8 @@ const routes = [
   {
     name: "searchlist",
     path: "/searchlist",
-    component: SearchList,
-    children: [{ path: "", redirect: { name: "searchlist" } }]
+    component: SearchList
+    // children: [{ path: "", redirect: { name: "searchlist" } }]
   },
 
   {
@@ -127,6 +128,11 @@ const routes = [
     name: "fashiondetail",
     path: "/fashiondetail",
     component: fashiondetail
+  },
+  {
+    name: "themeList",
+    path: "/themeList",
+    component: themeList
   }
 ];
 

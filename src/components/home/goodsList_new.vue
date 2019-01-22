@@ -52,14 +52,15 @@ export default {
       this.$router.push({
         name: "searchlist",
         params: {
-          params: 5
+          lid: 5,
+          name:''
         }
       });
     }
   },
   created() {
     this.$axios.get("http://39.108.252.230:4008/good/goodsNew").then(res => {
-      this.goodsList_new = res.data.data.slice(3, 6);
+      this.goodsList_new = res.data.data.slice(2, 5);
     });
   }
 };

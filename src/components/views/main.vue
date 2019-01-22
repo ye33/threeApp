@@ -8,19 +8,19 @@
 	              <div v-if="!toShowMaskInfo" :class="[toShowMaskInfo ? '' : 'bounceInRight' , 'animated']">
 	                <img src="static/images/logo.jpg" class="xw-header-avatar">
 	                <div class="xw-header-title-wrap">
-	                  <div class="xw-header-title">三号馆客服</div>
+	                  <div class="xw-header-title">小薇客服</div>
 	                </div>
 	              </div>
 	          </div>
-	          <!-- 三号馆客服弹出的具体信息 -->
+	          <!-- 小薇客服弹出的具体信息 -->
 	          <div v-show="toShowMaskInfo" :class="[toShowMaskInfo ? 'bounceInDown' : '' , 'xw-show-info-box', 'animated']">
 	            <div class="xw-logo">
 	              <img src="static/images/logo.jpg">
-	              <h4>三号馆客服</h4>
+	              <h4>小薇客服</h4>
 	            </div>
 	            <div class="xw-header-info">
 	              <p class="animated bounceInLeft">
-	                三号馆客服产品，集成了电话呼叫中心、IM在线客服、移动在线客服、微信、微博、移动APP SDK、邮件等全客服渠道，用工单系统承载售后服务，配合帮助中心、智能机器人等自助服务。
+	                小薇客服产品，集成了电话呼叫中心、IM在线客服、移动在线客服、微信、微博、移动APP SDK、邮件等全客服渠道，用工单系统承载售后服务，配合帮助中心、智能机器人等自助服务。
 	              </p>
 	            </div>
 	          </div>
@@ -144,10 +144,9 @@
 </template>
 
 <script>
-    import evaluate from './views/evaluate.vue'
-    import Toast from './views/toast.vue'
-    import {getEmojiData} from './api/api.js'
-    import "../sass/chat.scss"
+    import evaluate from '../components/evaluate.vue'
+    import Toast from '../components/toast'
+    import {getEmojiData} from '../api/api.js'
     // import emojiSlider from '.././components/emojiSlide.vue'
   export default {
 		components: {
@@ -173,7 +172,7 @@ return {
 	records: [{
 		type: 1,
 		time: new Date().toLocaleTimeString(),
-		content: '您好！欢迎来到三号馆客服，请问有什么能帮到您？如有疑问请在线咨询或者拨打400-926-2012咨询！感谢您的支持! '
+		content: '您好！欢迎来到小薇客服，请问有什么能帮到您？如有疑问请在线咨询或者拨打400-926-2012咨询！感谢您的支持! '
 		}, 
 		{
 		type: 2,
@@ -335,12 +334,7 @@ methods: {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-}
-.mint-tabbar.is-fixed{
-  z-index:2;
-}
-.xw-footer-wrap{
-  margin-bottom:32px;
+	overflow: hidden;
 }
 .app{
 	display: flex;

@@ -27,6 +27,7 @@ import Vue from "vue";
 import mintUi from "mint-ui";
 import "mint-ui/lib/style.css";
 Vue.use(mintUi);
+Vue.config.productionTip = false
 
 // 可能会有冲突
 import axios from "axios";
@@ -83,10 +84,8 @@ export default {
   },
   watch: {
     $route(newValue, oldValue) {
-      // console.log("new:",newValue,"old:",oldValue);
       this.selected = newValue.name;
       if (newValue.name == "list") {
-        // console.log('yew');
         this.showBottom = false;
       } else if (newValue.name == "login") {
         this.showBottom = false;
@@ -94,8 +93,8 @@ export default {
         this.showBottom = false;
       } else if (newValue.name == "category") {
         this.showBottom = false;
-      } else if (newValue.name == "SearchList") {
-        this.showBottom = false;
+      } else if (newValue.name == "searchList") {
+        this.selected = 'list';
       } else {
         this.showBottom = true;
       }
@@ -112,12 +111,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   background-color: #f0f0f0;
-  /*padding-bottom:47px;*/
   height: 100%;
-  min-height: 610px;
   overflow-x:hidden;
   display:flex;
-  flex-direction:column;
 }
 
 .home{
