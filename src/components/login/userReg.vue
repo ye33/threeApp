@@ -39,6 +39,7 @@ export default {
           .then(res => {
             if (res.data.code == 1) {
               this.infor1 = "手机号已注册";
+              this.ok1 = false;
             } else {
               this.infor1 = "";
               this.ok1 = true;
@@ -46,15 +47,17 @@ export default {
           });
       } else {
         this.infor1 = "手机号不符合规则";
+        this.ok1 = false;
       }
     },
     checkpsw() {
-      let reg = /\w{6,18}$/;
+      let reg = /^[a-zA-Z]\w{5,18}$/;
       if (reg.test(this.password)) {
         this.ok2 = true;
         this.infor2 = "";
       } else {
         this.infor2 = "密码不符合规则";
+        this.ok2 = false;
       }
     },
     goto() {

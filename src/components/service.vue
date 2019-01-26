@@ -332,7 +332,6 @@ methods: {
 </script>
 <style>
 #app{
-	position: absolute;
 	height: 100%;
 	width: 100%;
 }
@@ -352,6 +351,7 @@ methods: {
 	flex:1;
 	position: relative;
 	overflow: auto;
+  margin-bottom:58px;
 	transition: height .8s;
 }
 

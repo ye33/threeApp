@@ -1,0 +1,21 @@
+html,body{height:100%;}
+body{margin:0;padding:0;}
+body>div{height:100%;}
+.page{height:100%;}
+
+
+@media (min-width:240px) and (max-width:320px){html{font-size:12.8px!important}};
+@media (min-width:321px) and (max-width:360px){html{font-size:14.4px!important}};
+@media (min-width:361px) and (max-width:375px){html{font-size:15px!important}};
+@media (min-width:376px) and (max-width:384px){html{font-size:15.36px!important}};
+@media (min-width:385px) and (max-width:414px){html{font-size:16.56px!important}};
+@media (min-width:415px) and (max-width:450px){html{font-size:18px!important}};
+@media (min-width:451px) and (max-width:500px){html{font-size:20px!important}};
+@media (min-width:501px) and (max-width:550px){html{font-size:22px!important}};
+@media (min-width:551px) and (max-width:569px){html{font-size:22.72px!important}};
+@media (min-width:569px) and (max-width:640px){html{font-size:25.6px!important}};
+@media (min-width:641px) and (max-width:667px){html{font-size:26.68px!important}};
+@media (min-width:668px) and (max-width:736px){html{font-size:29.44px!important}};
+@media (min-width:738px) and (max-width:768px){html{font-size:30.72px!important}};
+@media (min-width:769px) and (max-width:900px){html{font-size:36px!important}};
+@media (min-width:901px) and (max-width:1080px){html{font-size:43.24px!important}};

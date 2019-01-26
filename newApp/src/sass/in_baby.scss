@@ -1,0 +1,118 @@
+#app .in_baby {
+  // width: 322px;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  padding-bottom: 50px;
+  .mint-swipe {
+    // width: 322px;
+    width: 100%;
+    height: 320px;
+    .mint-swipe-items-wrap img {
+      // width: 322px;
+      // height: 320px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .price {
+    // width: 322px;
+    width: 100%;
+    height: 60px;
+    padding-left: 10px;
+    background: #fff;
+    h3 {
+      font-size: 10px;
+      color: #474747;
+      text-align: left;
+      line-height: 21px;
+    }
+    p {
+      font-size: 12px;
+      color: #e53b06;
+      span {
+        color: #474747;
+      }
+      del {
+        color: #8b8b8b;
+      }
+    }
+  }
+  .size {
+    width: 100%;
+    height: 65px;
+    padding-left: 10px;
+    background: #fff;
+    margin-top: 10px;
+   
+    h3 {
+      font-size: 12px;
+      color: #474747;
+      line-height: 34px;
+      font-weight: 400;
+      float:left;
+      // i {
+      //   padding-left: 183px;
+      // }
+    }
+
+
+      .right {
+        padding-top: 4px;
+        float:left;
+        margin-left:36px;
+        height:36px;
+        span {
+          display: inline-block;
+          width: 20px;
+          height: 19px;
+          border: 1px solid #ccc;
+          text-align: center;
+          font-size: 12px;
+          font-weight: 900;
+        }
+        input {
+          display: inline-block;
+          width: 60px;
+          height: 19px;
+          border: 1px solid #ccc;
+          text-align: center;
+        }
+        i {
+          padding-left: 38px;
+          }
+      }
+    
+    p {
+      width:100%;
+      font-size: 12px;
+      color: #474747;
+      float:left;
+    }
+  }
+  .promise {
+    width: 100%;
+    height: 28px;
+    font-size: 12px;
+    display: flex;
+    line-height: 28px;
+    text-align: center;
+    span {
+      color: #934d91;
+    }
+  }
+  h2 {
+    width: 100%;
+    height: 28px;
+    background: #fff;
+    line-height: 28px;
+    font-size: 12px;
+    font-weight: 400;
+    span {
+      padding-left: 183px;
+    }
+  }
+  .imgs img {
+    width: 100%;
+  }
+}

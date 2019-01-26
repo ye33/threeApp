@@ -93,7 +93,8 @@ export default {
         this.showBottom = false;
       } else if (newValue.name == "category") {
         this.showBottom = false;
-      } else if (newValue.name == "searchList") {
+      } else if (newValue.path == "/searchlist") {
+        this.showBottom = true;
         this.selected = 'list';
       } else {
         this.showBottom = true;
@@ -113,7 +114,10 @@ export default {
   background-color: #f0f0f0;
   height: 100%;
   overflow-x:hidden;
+  overflow-y:auto;
   display:flex;
+  width:100%;
+  flex-direction: column;
 }
 
 .home{
@@ -122,7 +126,7 @@ export default {
 .mint-tabbar {
   background: #fff;
 }
-.mint-tabbar > .mint-tab-item.is-selected {
+#app .mint-tabbar > .mint-tab-item.is-selected {
   background: #fff;
   color: #934d91;
   font-weight: 900;
@@ -135,46 +139,5 @@ export default {
   display: block;
   font-size: 18px;
   margin-bottom: 3px;
-
 }
 </style>
-
-
-
-<!-- =======
-	#app {
-		font-family: 'Avenir', Helvetica, Arial, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
-		color: #2c3e50;
-		background-color: #f0f0f0;
-		height: 100%;
-		min-height: 640px;
-		overflow-x: hidden;
-	}
-	#navBottom{
-		height:47px;
-	}
-	.mint-tabbar {
-		background: #fff;
-	}
-	
-	.mint-tabbar>.mint-tab-item.is-selected {
-		background: #fff;
-		color: #934d91;
-		font-weight: 900;
-	}
-	
-	.mint-tab-item-label .text {
-		-webkit-transform: scale(0.8);
-		transform: scale(0.8);
-	}
-	
-	.iconfont {
-		display: block;
-		font-size: 18px;
-		margin-bottom: 3px;
-	} -->
-<!-- </style>
->>>>>>> master -->

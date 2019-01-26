@@ -1,0 +1,152 @@
+#app .shoppingcar {
+  width: 100%;
+  height: 119px;
+  text-align: left;
+  .shoppingcar_t {
+    width: 100%;
+    height: 70px;
+
+    input {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-top: 30px;
+      margin-left: 10px;
+      line-height: 50px;
+    }
+
+    img {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      top: 15px;
+      margin-left: 5px;
+    }
+
+    span {
+      display: inline-block;
+      width: 168px;
+      height: 35px;
+      margin-left: 8px;
+    }
+  }
+
+  .shoppingcar_b {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background: #f8f8f8;
+    justify-content: space-between;
+    padding-right:10px;
+
+    .left {
+      margin-left: 20px;
+      width: 170px;
+      .removeItem {
+        margin-left: 40px;
+        width: 40px;
+        height: 20px;
+        background: #944d91;
+
+        color: #fff;
+      }
+
+      p {
+        color: #ea5d66;
+        line-height: 30px;
+        span {
+          color: #000000;
+        }
+      }
+    }
+
+    .right {
+      padding-top: 15px;
+      span {
+        display: inline-block;
+        width: 20px;
+        height: 19px;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 900;
+      }
+      input {
+        display: inline-block;
+        width: 60px;
+        height: 19px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.carbottom {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  z-index: 300;
+  background: #fff;
+
+  input {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    line-height: 50px;
+    flex: 1;
+  }
+
+  li:nth-child(2) {
+    flex: 2;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 900;
+    line-height: 54px;
+    margin-left: 8px;
+    text-align: left;
+  }
+
+  li:nth-child(3) {
+    flex: 3;
+
+    h3 {
+      font-size: 14px;
+      color: #000000;
+      line-height: 32px;
+      text-align: left;
+      padding-left: 8px;
+
+      span {
+        color: #92598e;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: #b3b3b3;
+      line-height: 20px;
+      text-align: right;
+      padding-right: 12px;
+    }
+  }
+
+  li:nth-child(4) {
+    flex: 2;
+    background: #934c92;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+    line-height: 50px;
+  }
+}
+
+ .cartlist{
+  margin-top:44px;
+}
