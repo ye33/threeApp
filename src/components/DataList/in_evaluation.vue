@@ -45,7 +45,7 @@ export default {
 
   .nodata {
     width: 163px;
-    height: 187px;
+    height: 370px;
     background-size: "contain";
     position: absolute;
     top: 0;

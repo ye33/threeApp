@@ -66,7 +66,6 @@
         computed:{
           getData:function(){
             this.datalist=this.$store.state.data;
-            console.log(this.datalist);
             return this.datalist
           }
         },

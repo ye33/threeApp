@@ -18,25 +18,27 @@
         </ul>
       </div>
     </div>
-    <div class="bigImg">
-      <img :src="imgurl" alt>
-      <p>{{text}}</p>
-    </div>
+    <div class="goodsBox">
+      <div class="bigImg">
+        <img :src="imgurl" alt>
+        <p>{{text}}</p>
+      </div>
 
-    <ul class="goodsList">
-      <li v-for="item in goodsList" :key="item.goodsId" @click="goto(item.goodsId)">
-        <div class="imgL">
-          <img :src="item.image" alt>
-        </div>
-        <div class="text">
-          <h4>{{item.name}}</h4>
-          <p>
-            <span class="price fl">{{item.price}}</span>
-            <span class="iconfont icon-gouwuche fr"></span>
-          </p>
-        </div>
-      </li>
-    </ul>
+      <ul class="goodsList">
+        <li v-for="item in goodsList" :key="item.goodsId" @click="goto(item.goodsId)">
+          <div class="imgL">
+            <img :src="item.image" alt>
+          </div>
+          <div class="text">
+            <h4>{{item.name}}</h4>
+            <p>
+              <span class="price fl">{{item.price}}</span>
+              <span class="iconfont icon-gouwuche fr"></span>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -123,13 +125,13 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.category {
+<!-- .category {
   position: relative;
   background: #f0f0f0;
   z-index: 6;
-}
+} -->
+<style lang="scss" scoped>
+
 
 .mint-header {
   background: #fff;
@@ -156,9 +158,11 @@ export default {
 .nav::-webkit-scrollbar {
   display: none;
 }
-
+.goodsBox{
+  width:100%;
+}
 .bigImg {
-  width:76%;
+  width:100%;
   img {
     width: 100%;
   }
@@ -166,11 +170,12 @@ export default {
     font-size: 12px;
     padding: 10px 15px;
     text-align: justify;
+    text-indent:2em;
   }
 }
 
 .goodsList {
-  width:76%;
+  width:100%;
   flex:1;
   padding: 0 8px 10x 8px;
   li {

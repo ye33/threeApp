@@ -133,9 +133,20 @@ export default {
   mounted(){
     if(localStorage.getItem("tokenData")){
       let storage=JSON.parse(localStorage.getItem("tokenData"));
-      let tel=(storage.tel).slice(3,9);
-      this.usertel=(storage.tel).replace(tel,'**');
-        this.noLogin=false;
+      let token=storage.token;
+        this.$axios.get('http://39.108.252.230:4008/token',{
+          headers:{
+            token
+          }
+        }).then(res=>{
+          if(res.data.code==200){
+            let tel=(storage.tel).slice(3,9);
+            this.usertel=(storage.tel).replace(tel,'**');
+              this.noLogin=false;
+            }else{
+              this.noLogin=true;
+            }
+          })
       }else{
         this.noLogin=true;
       }
@@ -146,6 +157,7 @@ export default {
 <style lang="scss" scoped>
 .mine {
   height: 100%;
+  min-height:640px;
   .top {
     width: 100%;
     padding: 16px;

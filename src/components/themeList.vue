@@ -57,7 +57,6 @@ export default {
     this.$axios
       .get("http://39.108.252.230:4008/themeList2/" + this.current)
       .then(res => {
-        console.log(res);
         this.goodsList = res.data.data;
         this.imgurl = res.data.topic.phoneBanner;
         this.title = res.data.topic.name;
